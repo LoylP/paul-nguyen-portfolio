@@ -2,20 +2,6 @@ import { en } from "./en";
 import { vi } from "./vi";
 
 export type Language = "vi" | "en";
-export type ArchitectureDiagramId =
-  | "agent-factory"
-  | "copilot-adoption"
-  | "knowledge-assistant"
-  | "ticket-automation"
-  | "genai-fashion"
-  | "ticket-decision-support"
-  | "tailored-ai-solutions"
-  | "internal-knowledge-qa"
-  | "manager-decision-support"
-  | "task-schedule-management"
-  | "elearning-platform"
-  | "reliability-thesis";
-
 export type PortfolioImage = {
   src: string;
   width: number;
@@ -23,12 +9,16 @@ export type PortfolioImage = {
   alt: Record<Language, string>;
   objectPosition?: string;
   fit?: "cover" | "contain";
+  label?: Record<Language, string>;
+  caption?: Record<Language, string>;
 };
 
 export type PortfolioProject = {
-  architectureDiagram?: ArchitectureDiagramId;
   architectureImage?: PortfolioImage;
   coverImage?: PortfolioImage;
+  coverIcon?: "Puzzle" | "GraduationCap";
+  detailSteps?: { title: string; summary: string }[];
+  visualTitle?: string;
   title: string;
   summary: string;
   tag: string;
@@ -97,10 +87,6 @@ export type PortfolioContent = {
     title: string;
     steps: { phase: string; title: string; summary: string }[];
   };
-  skills: {
-    title: string;
-    groups: { title: string; skills: string[] }[];
-  };
   projects: {
     title: string;
     tabs: {
@@ -109,10 +95,6 @@ export type PortfolioContent = {
       projects: PortfolioProject[];
       highlights?: string[];
     }[];
-  };
-  industry: {
-    title: string;
-    items: { title: string }[];
   };
   research: {
     title: string;

@@ -8,7 +8,6 @@ import { getPortfolioContent, type PortfolioProject } from "@/data/portfolioData
 import { useLanguage } from "./Providers";
 import { ProjectCard } from "./ProjectCard";
 import { SectionHeading } from "./SectionHeading";
-import { ArchitectureDiagram } from "./ArchitectureDiagram";
 import { ImageLightbox } from "./ImageLightbox";
 import { Reveal } from "./motion/Reveal";
 
@@ -205,6 +204,7 @@ function ProjectDrawer({
     [labels.outcome, project.outcome],
   ].filter((detail): detail is [string, string] => Boolean(detail[1]));
   const tags = project.stack ?? project.ecosystem ?? [];
+  const hasVisualDetails = Boolean(project.architectureImage || project.detailSteps?.length);
   const timelineAndScale = [project.period, project.customerSegment, project.conference]
     .filter(Boolean)
     .join(" · ");
@@ -254,18 +254,32 @@ function ProjectDrawer({
             <ul className="tag-list">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
           </section>
         ) : null}
-        <section className="drawer-detail">
-          <h3>{labels.architecture}</h3>
-          {project.switchTab ? (
-            <ArchitectureDiagram diagram={project.architectureDiagram ?? "tailored-ai-solutions"} language={language} />
-          ) : project.architectureImage ? (
-            <ImageLightbox image={project.architectureImage} language={language} variant="detail" />
-          ) : project.architectureDiagram ? (
-            <ArchitectureDiagram diagram={project.architectureDiagram} language={language} />
-          ) : (
-            <ul className="tag-list">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-          )}
-        </section>
+        {hasVisualDetails ? (
+          <section className="drawer-detail">
+            <h3>{project.visualTitle ?? labels.architecture}</h3>
+            {project.architectureImage ? (
+              <>
+                <ImageLightbox image={project.architectureImage} language={language} variant="detail" />
+                {project.architectureImage.caption ? (
+                  <p className="project-image-caption">{project.architectureImage.caption[language]}</p>
+                ) : null}
+              </>
+            ) : null}
+            {project.detailSteps ? (
+              <ol className="project-detail-stepper">
+                {project.detailSteps.map((step, index) => (
+                  <li key={`${step.title}-${index}`}>
+                    <span aria-hidden="true">{index + 1}</span>
+                    <div>
+                      <h4>{step.title}</h4>
+                      <p>{step.summary}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            ) : null}
+          </section>
+        ) : null}
         {project.role ? (
           <section className="drawer-detail">
             <h3>{labels.role}</h3>

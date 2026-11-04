@@ -1,11 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Puzzle } from "lucide-react";
 import type { PortfolioProject } from "@/data/portfolioData";
 import { useLanguage } from "./Providers";
-import { ArchitectureDiagram } from "./ArchitectureDiagram";
-import { ImageLightbox } from "./ImageLightbox";
 import { Spotlight } from "./motion/Spotlight";
 
 type ProjectCardProps = {
@@ -15,6 +13,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, onSelect }: ProjectCardProps) {
   const { language } = useLanguage();
+  const CoverIcon = project.coverIcon === "GraduationCap" ? GraduationCap : Puzzle;
 
   return (
     <Spotlight as="article" className="project-card">
@@ -25,15 +24,18 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
             className="project-cover-image"
             height={project.coverImage.height}
             loading="lazy"
-            sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1000px) 50vw, 33vw"
+            sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1000px) 50vw, 33vw"
             src={project.coverImage.src}
             style={{ objectFit: "cover", objectPosition: project.coverImage.objectPosition ?? "center" }}
             width={project.coverImage.width}
           />
-        ) : project.architectureImage ? (
-          <ImageLightbox image={project.architectureImage} language={language} variant="cover" />
-        ) : project.architectureDiagram ? (
-          <ArchitectureDiagram diagram={project.architectureDiagram} language={language} variant="cover" />
+        ) : (
+          <div className="project-cover-placeholder" aria-hidden="true">
+            <CoverIcon size={64} strokeWidth={1.35} />
+          </div>
+        )}
+        {project.coverImage?.label ? (
+          <span className="project-cover-label">{project.coverImage.label[language]}</span>
         ) : null}
       </div>
       <div className="project-card-content">
