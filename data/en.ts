@@ -150,7 +150,7 @@ export const en = {
                 vi: "Kiến trúc Agent Factory với blueprint tái sử dụng, control plane quản lý vòng đời và AI governance.",
               },
             },
-            role: "Solution Architect (competition team)",
+            role: "AI Engineer",
             context:
               "Agents and flows were scattered across teams — hard to control and impossible to reuse.",
             outcome: "Established reusable, centrally governed agent workflows for enterprise process automation.",
@@ -534,9 +534,9 @@ export const en = {
       },
       {
         type: "paper",
-        title: "2 international conference papers · First author (SoICT 2024, NSS 2025)",
-        summary: "ArtemisSearch and FraudTrace — open the Academic tab for details.",
-        projectTab: "research",
+        title: "ArtemisSearch · SoICT 2024",
+        summary: "First-author paper on multimodal video retrieval.",
+        paperUrl: "artemissearch",
         image: {
           src: "/images/soict2024-talk.jpg",
           width: 3480,
@@ -549,7 +549,23 @@ export const en = {
         },
       },
       {
-        type: "credential",
+        type: "paper",
+        title: "FraudTrace · NSS 2025",
+        summary: "First-author paper on multi-agent LLM verification of online scam news.",
+        paperUrl: "fraudtrace",
+        image: {
+          src: "/images/fraudtrace-architecture.png",
+          width: 1482,
+          height: 751,
+          fit: "contain",
+          alt: {
+            en: "FraudTrace multi-agent system architecture for checking online news.",
+            vi: "Sơ đồ kiến trúc multi-agent FraudTrace kiểm chứng tin tức trực tuyến.",
+          },
+        },
+      },
+        {
+          type: "credential",
         title: "Microsoft Frontier Engineer & Copilot Jumpstart",
         summary: "Professional credential and training program in enterprise AI.",
       },

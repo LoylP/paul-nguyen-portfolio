@@ -65,8 +65,8 @@ Update the centralized values in [`config/site.ts`](./config/site.ts):
 
 - `CONTACT_EMAIL` and `LINKEDIN_URL`
 - `ENGLISH_LEVEL`
-- `CV_PATH` — add the corresponding CV file under `public/`
-- `PAPER_URLS` — replace the example URLs with the final publication links
+- `CV_PATH` — points to the CV file under `public/resume/`
+- `PAPER_URLS` — publication links for ArtemisSearch and FraudTrace
 
 For correct canonical and social-preview URLs in production, set `NEXT_PUBLIC_SITE_URL` to the public site origin, for example:
 

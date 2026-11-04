@@ -150,7 +150,7 @@ export const vi = {
                 vi: "Kiến trúc Agent Factory với blueprint tái sử dụng, control plane quản lý vòng đời và AI governance.",
               },
             },
-            role: "Solution Architect (đội dự thi)",
+            role: "AI Engineer",
             context:
               "Agent và flow nằm rải rác ở nhiều phòng ban, khó kiểm soát rủi ro và không tái sử dụng được.",
             outcome: "Hình thành quy trình AI agent có thể tái sử dụng và quản trị tập trung.",
@@ -533,9 +533,9 @@ export const vi = {
       },
       {
         type: "paper",
-        title: "2 bài báo hội nghị quốc tế · Tác giả chính (SoICT 2024, NSS 2025)",
-        summary: "ArtemisSearch và FraudTrace — mở tab Học thuật để xem chi tiết.",
-        projectTab: "research",
+        title: "ArtemisSearch · SoICT 2024",
+        summary: "Bài báo tác giả chính về tìm kiếm video đa phương thức.",
+        paperUrl: "artemissearch",
         image: {
           src: "/images/soict2024-talk.jpg",
           width: 3480,
@@ -548,7 +548,23 @@ export const vi = {
         },
       },
       {
-        type: "credential",
+        type: "paper",
+        title: "FraudTrace · NSS 2025",
+        summary: "Bài báo tác giả chính về hệ multi-agent LLM xác minh tin lừa đảo trực tuyến.",
+        paperUrl: "fraudtrace",
+        image: {
+          src: "/images/fraudtrace-architecture.png",
+          width: 1482,
+          height: 751,
+          fit: "contain",
+          alt: {
+            en: "FraudTrace multi-agent system architecture for checking online news.",
+            vi: "Sơ đồ kiến trúc multi-agent FraudTrace kiểm chứng tin tức trực tuyến.",
+          },
+        },
+      },
+        {
+          type: "credential",
         title: "Microsoft Frontier Engineer & Copilot Jumpstart",
         summary: "Chứng nhận chuyên môn và chương trình đào tạo về AI doanh nghiệp.",
       },
