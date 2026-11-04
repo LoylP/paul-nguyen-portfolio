@@ -25,7 +25,6 @@ export function AboutSection() {
             <Spotlight>
               <span className="card-index">0{index + 1}</span>
               <h3>{pillar.title}</h3>
-              <p>{pillar.description}</p>
             </Spotlight>
           </Reveal>
         ))}
@@ -36,7 +35,6 @@ export function AboutSection() {
         </span>
         <div>
           <h3>{copy.trajectory.title}</h3>
-          <p>{copy.trajectory.description}</p>
         </div>
       </Spotlight>
     </Reveal>

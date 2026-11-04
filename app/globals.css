@@ -615,7 +615,7 @@ button {
 
 .expertise-blocks {
   display: grid;
-  gap: 40px;
+  gap: 36px;
 }
 
 .expertise-subblock {
@@ -662,7 +662,7 @@ button {
   text-wrap: balance;
 }
 
-.section-description {
+.contact-message {
   max-width: 680px;
   margin: 14px 0 0;
   color: var(--muted);
@@ -800,6 +800,8 @@ button {
 }
 
 .timeline-entry {
+  display: grid;
+  gap: 6px;
   padding: 2px 0;
 }
 
@@ -819,34 +821,58 @@ button {
   box-shadow: 0 0 0 1px var(--accent);
 }
 
-.timeline-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 14px;
+.timeline-date {
   color: var(--accent);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.timeline-content h3,
-.timeline-content p {
+.timeline-title,
+.timeline-organization,
+.timeline-summary {
   margin: 0;
 }
 
-.timeline-content h3 {
+.timeline-title {
   font-size: 1.125rem;
+  font-weight: 650;
   letter-spacing: -0.025em;
 }
 
-.timeline-organization {
-  margin: 5px 0 9px !important;
-  color: var(--foreground);
-  font-weight: 600;
+.timeline-organization,
+.timeline-summary {
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-.timeline-content p:last-child {
+.timeline-organization {
   color: var(--muted);
-  line-height: 1.7;
+}
+
+.timeline-summary {
+  margin-top: 2px;
+  color: var(--muted);
+}
+
+.timeline-bullets-disclosure {
+  margin-top: 8px;
+}
+
+.timeline-bullets-disclosure summary {
+  width: fit-content;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.timeline-bullets {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .framework-grid {
@@ -897,7 +923,7 @@ button {
 .framework-card {
   position: relative;
   height: 100%;
-  padding: 22px;
+  padding: 16px;
 }
 
 .framework-card.is-active {
@@ -931,11 +957,11 @@ button {
 
 .framework-icon {
   display: inline-flex;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--background);
@@ -951,7 +977,9 @@ button {
 }
 
 .framework-card h3 {
-  margin-top: 14px;
+  margin: 8px 0;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .framework-card p {
@@ -964,6 +992,29 @@ button {
 
 .skills-grid {
   grid-template-columns: 1fr;
+}
+
+.industry-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.industry-list li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.industry-list svg {
+  margin-top: 1px;
+  color: var(--accent);
 }
 
 .tag-list {
@@ -998,7 +1049,7 @@ button {
 .tag-expand:focus-visible,
 .industry-detail summary:focus-visible,
 .framework-details summary:focus-visible,
-.timeline-entry summary:focus-visible {
+.timeline-bullets-disclosure summary:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
@@ -1210,6 +1261,18 @@ button {
   line-height: 1.5;
 }
 
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 .project-card h3 {
   margin: 10px 0 0;
 }
@@ -1272,21 +1335,30 @@ button {
   margin-bottom: 0;
 }
 
+.project-drawer-overlay {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgb(2 6 23 / 68%);
+  backdrop-filter: blur(4px);
+}
+
 .project-dialog {
-  width: min(720px, calc(100% - 24px));
-  max-width: none;
-  max-height: min(86vh, 900px);
+  width: 100%;
+  max-width: 48rem;
+  max-height: 85vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: clamp(22px, 5vw, 40px);
   border: 1px solid var(--border);
   border-radius: 20px;
   background: var(--background);
   color: var(--foreground);
   box-shadow: 0 24px 80px rgb(0 0 0 / 25%);
-}
-
-.project-dialog::backdrop {
-  background: rgb(2 6 23 / 62%);
-  backdrop-filter: blur(4px);
 }
 
 .drawer-topline {
@@ -1485,6 +1557,24 @@ button {
   display: block;
   height: 100%;
   border-radius: 16px;
+}
+
+.credential-action {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+}
+
+.credential-action:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .credential-link:focus-visible {
@@ -1710,8 +1800,11 @@ button {
   }
 
   .expertise-blocks {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 36px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .framework-grid {
@@ -1783,6 +1876,20 @@ button {
 }
 
 @media (max-width: 600px) {
+  .project-drawer-overlay {
+    padding: 0;
+  }
+
+  .project-dialog {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    padding: 20px 16px;
+  }
+
   .theme-toggle {
     width: 40px;
     padding: 0;

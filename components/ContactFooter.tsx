@@ -20,11 +20,14 @@ export function ContactFooter() {
       id="contact"
       labelledBy="contact-title"
     >
-      <SectionHeading eyebrow={labels.eyebrow} title={copy.title} titleId="contact-title" description={copy.message} />
+      <SectionHeading eyebrow={labels.eyebrow} title={copy.title} titleId="contact-title" />
+      <p className="contact-message">{copy.message}</p>
       <ul className="contact-channels" aria-label={language === "vi" ? "Kênh liên hệ" : "Contact channels"}>
         <li><a href={`mailto:${CONTACT_EMAIL}`}>{labels.email}: {CONTACT_EMAIL}</a></li>
         <li>
-          <a href={LINKEDIN_URL} rel="noreferrer" target="_blank">{labels.linkedin}: {LINKEDIN_URL}</a>
+          <a href={LINKEDIN_URL} rel="noreferrer" target="_blank">
+            {labels.linkedin}: {LINKEDIN_URL.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+          </a>
         </li>
       </ul>
     </Reveal>

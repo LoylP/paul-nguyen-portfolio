@@ -17,31 +17,27 @@ export function ExperienceTimeline() {
       labelledBy="experience-title"
     >
       <SectionHeading
-        eyebrow={language === "vi" ? "03 / Kinh nghiệm" : "03 / Experience"}
+        eyebrow={language === "vi" ? "02 / Kinh nghiệm" : "02 / Experience"}
         title={copy.title}
         titleId="experience-title"
-        description={copy.intro}
       />
       <ol className="timeline">
         {copy.items.map((item, index) => (
           <Reveal as="li" className="timeline-item" delay={index * 0.05} key={`${item.organization}-${item.title}`}>
             <span className="timeline-dot" aria-hidden="true" />
-            <details className="timeline-entry">
-              <summary>
-                <span className="timeline-meta">
-                  <span>{item.period}</span>
-                  {item.location ? <span>{item.location}</span> : null}
-                </span>
-                <span className="timeline-content">
-                  <span className="timeline-title">{item.title}</span>
-                  <span className="timeline-organization">{item.organization}</span>
-                  <span className="timeline-summary">{item.description}</span>
-                </span>
-              </summary>
-              <ul className="timeline-bullets">
-                {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
-              </ul>
-            </details>
+            <article className="timeline-entry">
+              <time className="timeline-date">{item.period}</time>
+              <h3 className="timeline-title">{item.title}</h3>
+              <p className="timeline-organization">{item.organization}</p>
+              <details className="timeline-bullets-disclosure">
+                <summary>
+                  {language === "vi" ? "Xem trách nhiệm" : "View responsibilities"}
+                </summary>
+                <ul className="timeline-bullets">
+                  {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                </ul>
+              </details>
+            </article>
           </Reveal>
         ))}
       </ol>

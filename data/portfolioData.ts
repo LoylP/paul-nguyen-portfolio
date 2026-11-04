@@ -8,7 +8,13 @@ export type ArchitectureDiagramId =
   | "knowledge-assistant"
   | "ticket-automation"
   | "genai-fashion"
-  | "ticket-decision-support";
+  | "ticket-decision-support"
+  | "tailored-ai-solutions"
+  | "internal-knowledge-qa"
+  | "manager-decision-support"
+  | "task-schedule-management"
+  | "elearning-platform"
+  | "reliability-thesis";
 
 export type PortfolioImage = {
   src: string;
@@ -41,6 +47,8 @@ export type PortfolioProject = {
   conference?: string;
   contribution?: string;
   media?: string;
+  status?: string;
+  switchTab?: string;
 };
 
 export type ResearchCredential = {
@@ -48,6 +56,7 @@ export type ResearchCredential = {
   summary: string;
   type: "paper" | "credential" | "award" | "education";
   paperUrl?: "artemissearch" | "fraudtrace";
+  projectTab?: string;
   image?: PortfolioImage;
 };
 
@@ -70,25 +79,23 @@ export type PortfolioContent = {
   metrics: { value: string; label: string }[];
   about: {
     title: string;
-    pillars: { title: string; description: string }[];
-    trajectory: { title: string; description: string };
+    pillars: { title: string }[];
+    trajectory: { title: string };
   };
   experience: {
     title: string;
-    intro: string;
     careerVision: string;
     items: {
       title: string;
       organization: string;
       period: string;
       location?: string;
-      description: string;
       bullets: string[];
     }[];
   };
   framework: {
     title: string;
-    steps: { phase: string; title: string; summary: string; description: string }[];
+    steps: { phase: string; title: string; summary: string }[];
   };
   skills: {
     title: string;
@@ -105,8 +112,7 @@ export type PortfolioContent = {
   };
   industry: {
     title: string;
-    intro: string;
-    items: { title: string; description: string }[];
+    items: { title: string }[];
   };
   research: {
     title: string;

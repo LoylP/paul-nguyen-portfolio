@@ -4,24 +4,22 @@ import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "./Providers";
 
-const sectionIds = ["work", "method", "experience", "expertise", "research", "contact"] as const;
+const sectionIds = ["work", "experience", "expertise", "achievements", "contact"] as const;
 type SectionId = (typeof sectionIds)[number];
 
 const labels: Record<"vi" | "en", Record<SectionId, string>> = {
   vi: {
     work: "Dự án",
-    method: "Phương pháp",
     experience: "Kinh nghiệm",
     expertise: "Chuyên môn",
-    research: "Nghiên cứu",
+    achievements: "Thành tích",
     contact: "Liên hệ",
   },
   en: {
     work: "Work",
-    method: "Method",
     experience: "Experience",
     expertise: "Expertise",
-    research: "Research",
+    achievements: "Achievements",
     contact: "Contact",
   },
 };

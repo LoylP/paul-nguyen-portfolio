@@ -11,13 +11,13 @@ export const vi = {
     displayName: "Nguyễn Hoàng Phúc",
     altName: "Paul Nguyen",
     headline: "AI Solution Architect & Technical Consultant",
-    tagline: "Đưa AI doanh nghiệp từ PoC đến triển khai thực tế — trên Microsoft & AWS",
-    meta: "TP.HCM · Remote/Hybrid · Đang mở cơ hội AI Solution Architect / Presales",
+    tagline: "Đưa AI doanh nghiệp từ PoC đến triển khai thực tế",
+    meta: "TP.HCM · Đang mở cơ hội AI Solution Architect / Presales",
     summary:
       "AI Solution Architect giúp doanh nghiệp đưa Microsoft 365 Copilot và Amazon Quick từ PoC vào vận hành thực tế. Đã tư vấn cho 20+ doanh nghiệp và tham gia bảo vệ giải pháp cho 9 deal AI & Cloud, với nền tảng nghiên cứu AI vững chắc.",
     ctas: [
-      { label: "Xem Dự án Tiêu biểu", href: "#work" },
       { label: "Tải CV" },
+      { label: "Liên hệ", href: "#contact" },
     ],
   },
   metrics: [
@@ -31,39 +31,28 @@ export const vi = {
     pillars: [
       {
         title: "Nền tảng Học thuật & Nghiên cứu",
-        description:
-          "Thủ khoa đầu vào Thạc sĩ Khoa học Máy tính UIT, tốt nghiệp sớm Cử nhân Trí tuệ Nhân tạo loại Giỏi. Tác giả chính của hai bài báo tại hội nghị quốc tế (SoICT 2024, NSS 2025) thực hiện tại InSecLab, về tìm kiếm video đa phương thức với Vision Transformer và hệ thống Multi-Agent phòng chống lừa đảo trực tuyến. Nền tảng này giúp tôi đánh giá mô hình có cơ sở và luôn đặt an toàn dữ liệu lên trước khi đưa AI vào doanh nghiệp.",
       },
       {
         title: "Kỹ thuật Thực chiến",
-        description:
-          "Từ startup Deligent với tính năng sinh mẫu trang phục bằng GenAI đến AI Engineer Intern tại FTI, nơi pipeline tự động hóa xử lý ticket giảm 80% thao tác thủ công và giành Quán quân cuộc thi FTI AI Process Automation. Hands-on với Python/FastAPI, Next.js, RAG, Docker, GitLab CI/CD và triển khai mô hình trên GPU.",
       },
       {
         title: "Tư vấn Giải pháp & Presales",
-        description:
-          "AI Solution Consultant & Presales tại FTI và AI Solution Architect tại Khoi Solutions. Làm việc trực tiếp với ban điều hành để tư vấn giải pháp cho 20+ doanh nghiệp thuộc khối Tài chính – Ngân hàng, Xây dựng, Sản xuất và Bán lẻ; tham gia bảo vệ giải pháp kỹ thuật cho 9 deal AI & Cloud. Chuyên sâu Microsoft 365 Copilot / Copilot Studio và Amazon Quick; đồng tổ chức chuỗi Copilot workshop cùng Microsoft Vietnam; dẫn dắt nhóm intern và đào tạo kỹ thuật cho khách hàng.",
       },
     ],
     trajectory: {
       title: "Tầm nhìn Nghề nghiệp",
-      description:
-        "Trở thành Lead Solution Architect dẫn dắt toàn trình các giải pháp AI doanh nghiệp — từ discovery, PoC đến adoption — kết hợp nền tảng nghiên cứu với bài toán tăng trưởng và tối ưu chi phí của doanh nghiệp.",
     },
   },
   experience: {
     title: "Kinh nghiệm",
-    intro:
-      "Tôi kết nối nghiên cứu AI học thuật với kinh nghiệm kỹ thuật thực tế và tư vấn giải pháp doanh nghiệp. Tôi giúp đội ngũ chuyển từ bài toán kinh doanh rõ ràng đến giải pháp AI an toàn, có thể ứng dụng.",
     careerVision:
       "Định hướng: phát triển thành Lead Solution Architect, dẫn dắt giải pháp AI doanh nghiệp từ khảo sát đến ứng dụng.",
     items: [
       {
         title: "AI Solution Architect",
         organization: "Khoi Solutions",
-        period: "08/2026 – Hiện tại",
+        period: "08/2026 – 10/2026",
         location: "Remote / Hybrid",
-        description: "Tư vấn kiến trúc giải pháp và adoption AI cho khách hàng doanh nghiệp; dẫn dắt nhóm intern.",
         bullets: [
           "Định hình kiến trúc giải pháp theo ưu tiên kinh doanh và mức độ sẵn sàng dữ liệu.",
           "Đồng hành cùng doanh nghiệp trong lập kế hoạch và triển khai ứng dụng.",
@@ -73,8 +62,6 @@ export const vi = {
         title: "AI Solution Consultant & Presales",
         organization: "FPT Telecom International (FTI)",
         period: "07/2025 – 09/2026",
-        description:
-          "Tư vấn giải pháp, presales, PoC và đào tạo kỹ thuật cho hơn 20 doanh nghiệp; đồng tổ chức workshop cùng Microsoft Vietnam.",
         bullets: [
           "Tư vấn giải pháp và presales cho hơn 20 doanh nghiệp.",
           "Hỗ trợ cơ hội AI và Cloud từ discovery, PoC đến bảo vệ giải pháp.",
@@ -85,7 +72,6 @@ export const vi = {
         title: "AI Engineer Intern",
         organization: "FPT Telecom International (FTI)",
         period: "01/2025 – 06/2025",
-        description: "Xây dựng pipeline tự động hóa xử lý ticket bằng AI; Quán quân cuộc thi FTI AI Process Automation.",
         bullets: [
           "Xây dựng pipeline AI tiếp nhận và phân loại ticket vận hành.",
           "Giảm 80% thao tác công cụ thủ công.",
@@ -96,7 +82,6 @@ export const vi = {
         title: "Frontend + AI Developer Intern",
         organization: "Deligent",
         period: "08/2024 – 12/2024",
-        description: "Phát triển tính năng sinh mẫu trang phục bằng GenAI.",
         bullets: [
           "Phát triển trải nghiệm web đáp ứng cho thiết kế trang phục bằng AI.",
           "Kết nối mô tả ngôn ngữ tự nhiên với quy trình tạo ảnh.",
@@ -111,83 +96,76 @@ export const vi = {
         phase: "01",
         title: "Khảo sát & Phân tích",
         summary: "Hiểu bài toán kinh doanh và mức sẵn sàng dữ liệu",
-        description:
-          "Làm việc trực tiếp cùng ban điều hành để thấu hiểu bài toán cốt lõi, xác định điểm nghẽn vận hành và đánh giá mức độ sẵn sàng, quản trị dữ liệu.",
       },
       {
         phase: "02",
         title: "Thiết kế Kiến trúc",
         summary: "Chọn stack phù hợp và rào chắn an toàn dữ liệu",
-        description:
-          "Lựa chọn nền tảng phù hợp như Microsoft 365 Copilot, Amazon Quick hoặc Private RAG; thiết lập nguyên tắc an toàn dữ liệu và phân quyền truy cập.",
       },
       {
         phase: "03",
         title: "PoC / Pilot",
         summary: "Kiểm chứng với người dùng thật trước khi mở rộng",
-        description:
-          "Xây dựng PoC hoặc pilot với nhóm người dùng thật; đánh giá độ chính xác, độ trễ và chi phí trước khi mở rộng.",
       },
       {
         phase: "04",
         title: "Chuyển giao & Ứng dụng",
         summary: "Đào tạo theo vai trò và theo dõi mức độ sử dụng",
-        description:
-          "Xây dựng tài liệu đào tạo theo vai trò, tổ chức workshop chuyển giao, theo dõi mức độ sử dụng và hỗ trợ sau đào tạo để đạt mục tiêu ứng dụng.",
       },
     ],
   },
   skills: {
-    title: "Năng lực & Công cụ Kỹ thuật",
+    title: "Năng lực kỹ thuật",
     groups: [
       {
         title: "Nền tảng AI doanh nghiệp",
         skills: [
           "Microsoft 365 Copilot",
-          "Microsoft Copilot Studio",
+          "Copilot Studio",
           "Power Platform",
+          "Power Automate",
           "Azure OpenAI",
           "Amazon Quick",
           "Amazon Bedrock",
         ],
       },
       {
-        title: "Tác tử AI & Tự động hóa quy trình",
+        title: "Tác tử AI & Tự động hoá",
         skills: [
-          "Hệ đa tác tử",
-          "Điều phối Agent Factory",
-          "n8n",
-          "Dify",
-          "LangChain",
+          "Multi-Agent Systems",
           "CrewAI",
-          "Tự động hóa quy trình",
-          "Tái thiết kế quy trình",
+          "LangChain",
+          "Dify",
+          "n8n",
+          "Apache Airflow",
         ],
       },
       {
-        title: "AI / ML & Kỹ thuật",
+        title: "AI/ML & Dữ liệu",
         skills: [
           "Python",
-          "FastAPI",
           "PyTorch",
           "Hugging Face",
-          "Unsloth (tinh chỉnh LLM)",
-          "Kiến trúc RAG doanh nghiệp",
-          "Vision Transformer (ViT)",
-          "Lượng tử hóa & triển khai mô hình",
+          "RAG",
+          "LLM Fine-tuning (Unsloth)",
+          "Vision Transformer",
+          "Milvus",
+          "Elasticsearch",
         ],
       },
       {
-        title: "Phát triển toàn diện, DevOps & Bảo mật dữ liệu",
+        title: "Phát triển & Hạ tầng",
         skills: [
-          "Docker",
-          "GitLab CI/CD",
-          "Linux",
+          "C#",
+          ".NET",
+          "FastAPI",
           "Next.js",
           "React",
           "Tailwind CSS",
-          "Tích hợp REST API",
-          "Quản trị dữ liệu & phân quyền cho AI",
+          "PostgreSQL",
+          "Docker",
+          "GitLab CI/CD",
+          "Linux",
         ],
       },
     ],
@@ -221,11 +199,11 @@ export const vi = {
             solution:
               "Thiết kế kiến trúc Orchestrator tập trung quản lý toàn bộ vòng đời Agent, tích hợp các luồng workflow tự động qua Microsoft Copilot Studio, Power Platform, n8n, Dify và REST APIs.",
             outcome: "Hình thành quy trình AI agent có thể tái sử dụng và quản trị tập trung.",
-            stack: ["Microsoft Copilot Studio", "Power Platform", "n8n", "Dify", "REST APIs", "Multi-Agent"],
+            stack: ["Power Platform", "Dify", "REST APIs", "Multi-Agent"],
             media: "Ảnh nhận giải Quán quân Top 1 cùng ban giám khảo.",
           },
           {
-            title: "Microsoft 365 Copilot cho Tổng thầu Xây dựng & Chuỗi Workshop",
+            title: "Chuỗi Workshop & Training Microsoft 365 Copilot",
             tag: "Ứng dụng AI doanh nghiệp",
             summary: "Đồng hành 600+ người dùng từ PoC đến rollout Microsoft 365 Copilot.",
             architectureDiagram: "copilot-adoption",
@@ -241,7 +219,7 @@ export const vi = {
             },
             role: "Technical Trainer · Đồng tổ chức workshop",
             customerSegment: "Tổng thầu xây dựng niêm yết (600+ người dùng) và khách hàng enterprise",
-            ecosystem: ["Microsoft 365 Copilot", "Copilot Studio", "Azure OpenAI", "Microsoft Power Platform"],
+            ecosystem: ["Microsoft 365 Copilot", "Copilot Studio", "Microsoft Power Platform"],
             context:
               "Doanh nghiệp đầu tư vào Microsoft Copilot và hạ tầng AI nhưng gặp rào cản nhân sự chưa biết cách khai thác vào nghiệp vụ hàng ngày, tỷ lệ sử dụng thấp và e ngại rủi ro rò rỉ dữ liệu.",
             solution:
@@ -252,74 +230,84 @@ export const vi = {
             media: "Ảnh co-hosting Copilot Workshop (chỉ sử dụng khi được cho phép và đã che thông tin nhận diện khách hàng).",
           },
           {
-            title: "Trợ lý Tri thức Doanh nghiệp cho Sản xuất & Chuỗi Cung ứng (Amazon Quick & Enterprise RAG)",
-            tag: "Sản xuất · Trợ lý tri thức",
-            summary: "Trợ lý tra cứu tài liệu kỹ thuật trên Amazon Quick cho doanh nghiệp sản xuất.",
-            architectureDiagram: "knowledge-assistant",
-            role: "AI Solution Consultant / Presales",
-            customerSegment:
-              "Doanh nghiệp sản xuất – chuỗi cung ứng (giày dép – dệt may xuất khẩu, vật liệu xây dựng, sản xuất công nghiệp)",
-            ecosystem: ["Amazon Quick", "Amazon Bedrock", "Enterprise RAG"],
-            context:
-              "Thông số kỹ thuật, hồ sơ chuỗi cung ứng, spec vật liệu và tài liệu vận hành nằm rải rác trên nhiều hệ thống (S3, Salesforce, Jira, SharePoint), khiến việc tra cứu thủ công tốn nhiều thời gian.",
-            solution:
-              "Tư vấn và thiết kế kiến trúc Enterprise Knowledge Assistant trên Amazon Quick với các connector dữ liệu có phân quyền; bóc tách tự động bảng thông số kỹ thuật và báo cáo sản xuất phức tạp.",
-            outcome: "Thiết kế trợ lý có phân quyền, giúp tra cứu tri thức kỹ thuật thuận tiện hơn.",
-            measurement:
-              "Đánh giá độ chính xác câu trả lời và thời gian tra cứu trên các tình huống nghiệp vụ thực tế trong PoC; bảo vệ giải pháp kỹ thuật trước ban điều hành nhà máy.",
+            title: "Giải pháp AI may đo theo bài toán doanh nghiệp",
+            tag: "Tư vấn giải pháp AI",
+            summary: "Từ pain point đến giải pháp dùng được ngay — ưu tiên SaaS và open source sẵn có, tùy chỉnh theo dữ liệu, AI và bảo mật.",
+            architectureDiagram: "tailored-ai-solutions",
+            switchTab: "engineering",
+            role: "AI Solution Architect / Presales",
+            context: "Doanh nghiệp cần chuyển các pain point thành giải pháp AI phù hợp, dễ áp dụng và đáp ứng yêu cầu dữ liệu, AI, bảo mật.",
+            approach: "Tìm hiểu hiện trạng và vấn đề; thiết kế giải pháp phù hợp; ưu tiên SaaS và mã nguồn mở có sẵn, tùy chỉnh theo dữ liệu · AI · bảo mật; hướng dẫn để người dùng áp dụng nhanh.",
+            outcome: "Quy trình tư vấn hướng đến giải pháp thực tế, dễ dùng và tận dụng nền tảng sẵn có.",
+            stack: ["Microsoft 365 Copilot", "Amazon Quick", "Open source"],
           },
         ],
       },
       {
         id: "engineering",
-        label: "Kỹ thuật",
+        label: "Hệ thống AI đã xây dựng",
         projects: [
           {
-            title: "Hệ thống Tự động hóa Xử lý Ticket Vận hành bằng AI",
+            title: "Tự động hoá xử lý ticket vận hành bằng AI",
             architectureDiagram: "ticket-automation",
             tag: "Tự động hóa AI",
-            summary: "Pipeline AI tiếp nhận và phân loại ticket — giảm 80% thao tác thủ công.",
-            subtitle: "AI-Powered Ticket Processing",
-            role: "AI Engineer Intern",
-            organization: "Doanh nghiệp viễn thông",
-            period: "01/2025 – 06/2025",
-            context:
-              "Phân tích bài toán trực tiếp cùng ban điều hành; tự động hóa tiếp nhận, phân loại và điều phối ticket kỹ thuật.",
-            solution: "Xây dựng pipeline xử lý ticket vận hành bằng AI Agents.",
-            outcome: "Tinh gọn quy trình tiếp nhận ticket vận hành và rút ngắn thời gian xử lý.",
-            stack: ["Python", "FastAPI", "Docker", "GitLab CI/CD", "Large Language Models", "AI Agents"],
+            summary: "Tiếp nhận, phân loại và điều phối ticket CSKH, nội bộ và IT helpdesk.",
+            context: "Ticket CSKH, nội bộ và IT helpdesk cần được tiếp nhận, phân loại và chuyển đến đúng nhóm xử lý.",
+            approach: "Xây dựng pipeline AI xử lý ticket với các bước tiếp nhận, phân loại và điều phối.",
+            outcome: "Giảm 80% thao tác thủ công.",
+            stack: ["C#", ".NET", "Python (Apache Airflow)", "Dify", "Docker"],
           },
           {
-            title: "Nền tảng Thiết kế Thời trang Tự động bằng Generative AI",
-            architectureDiagram: "genai-fashion",
-            tag: "AI tạo sinh",
-            summary: "Sinh mẫu trang phục từ mô tả bằng GenAI.",
-            subtitle: "GenAI Fashion Platform",
-            role: "Frontend + AI Developer Intern",
-            organization: "Startup công nghệ",
-            period: "08/2024 – 12/2024",
-            context:
-              "Phát triển giao diện web tương tác và kết nối API mô hình khuếch tán để sinh mẫu áo thun, phụ kiện tự động từ câu lệnh người dùng.",
-            solution: "Tích hợp trải nghiệm web với các API tạo ảnh để đưa thiết kế từ prompt vào quy trình sản phẩm.",
-            outcome:
-              "Hoàn thiện quy trình thiết kế bằng AI từ mô tả đến ý tưởng hình ảnh.",
-            stack: ["Next.js", "React", "Tailwind CSS", "Image Generation APIs", "FastAPI", "Diffusion Models"],
+            title: "Hỗ trợ ra quyết định cho quản lý",
+            architectureDiagram: "manager-decision-support",
+            tag: "Tự động hóa nghiệp vụ",
+            summary: "AI đề xuất hướng xử lý phù hợp, chạy trên license Microsoft sẵn có — không cần build mới.",
+            context: "Quản lý cần đề xuất hướng xử lý phù hợp mà không phát triển hệ thống mới.",
+            approach: "Dùng Copilot Studio, Power Platform và Power Automate trên license Microsoft hiện có.",
+            outcome: "Hỗ trợ ra quyết định mà không cần build mới.",
+            stack: ["Copilot Studio", "Power Platform", "Power Automate", "Microsoft 365 Copilot"],
           },
           {
-            title: "Hệ thống Hỗ trợ Ra quyết định cho Quản lý Ticket",
-            architectureDiagram: "ticket-decision-support",
+            title: "Quản lý công việc & lịch, tự động phân công",
+            architectureDiagram: "task-schedule-management",
+            tag: "Tự động hóa nghiệp vụ",
+            summary: "Giao việc đúng người, nhắc lịch, cảnh báo và hỏi đáp qua trợ lý AI có sẵn.",
+            context: "Đội ngũ cần tự động giao việc, quản lý lịch, nhận nhắc nhở và tra cứu thông tin.",
+            approach: "Kết hợp trợ lý AI sẵn có với luồng tự động hóa để phân công, nhắc lịch và cảnh báo.",
+            outcome: "Giảm thao tác quản lý công việc thủ công.",
+            stack: ["Copilot Studio", "Power Automate", "Microsoft 365 Copilot"],
+          },
+          {
+            title: "Hệ thống tra cứu & hỏi đáp tài liệu nội bộ",
+            architectureDiagram: "internal-knowledge-qa",
+            tag: "Tri thức nội bộ",
+            summary: "Hỏi đáp quy trình và hướng dẫn nội bộ bằng RAG, trả lời kèm ảnh minh hoạ, tự cải thiện từ feedback.",
+            context: "Người dùng cần tra cứu quy trình và hướng dẫn nội bộ từ kho tài liệu tập trung.",
+            approach: "Thu thập và phân tích dữ liệu người dùng → làm sạch thành kho tri thức → thiết kế truy vấn RAG → trả lời kèm hình ảnh → tiếp nhận feedback, tự đánh giá và cập nhật kho tri thức.",
+            outcome: "Câu trả lời minh họa được cải thiện liên tục từ feedback.",
+            stack: ["RAG", "Kho tri thức", "Vòng lặp phản hồi"],
+          },
+          {
+            title: "Nền tảng E-learning cho Trainer & Presales",
+            architectureDiagram: "elearning-platform",
+            tag: "Đang phát triển",
+            status: "Đang phát triển",
+            summary: "Kho tài liệu đào tạo và use-case portfolio theo ngành, tái sử dụng cho khách hàng cùng lĩnh vực.",
+            context: "Mục tiêu là xây dựng template chuẩn cho ngành, portfolio use case luôn cập nhật, chuẩn bị nhanh hơn và có tài liệu chuyên nghiệp sẵn sàng trình bày. Phạm vi gồm sản phẩm AI Enterprise, mức độ sẵn sàng dữ liệu, sử dụng AI an toàn và kiểm soát truy cập.",
+            approach: "Thiết kế nội dung và video đào tạo đang thực hiện; dự kiến xây dựng ứng dụng sau đó.",
+            outcome: "Trạng thái: thiết kế nội dung và video đào tạo đang tiến hành; ứng dụng đang được lên kế hoạch.",
+            stack: ["Next.js", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL"],
+          },
+          {
+            title: "Luận văn Thạc sĩ: Hệ hỗ trợ ra quyết định bằng cơ chế lan truyền độ tin cậy",
+            architectureDiagram: "reliability-thesis",
             tag: "Luận văn Thạc sĩ",
-            summary: "Hệ hỗ trợ ra quyết định phân loại và phân công ticket.",
-            subtitle: "Luận văn Thạc sĩ",
-            role: "Học viên thực hiện luận văn",
-            organization: "UIT – Thạc sĩ Khoa học Máy tính",
-            period: "2025 – nay",
-            context:
-              "Thiết kế lại hệ thống ticket hỗ trợ sau mỗi đợt triển khai/đào tạo AI: tiếp nhận từ nhiều kênh (form, Teams), phân loại ticket và phân công đúng người xử lý.",
-            approach:
-              "Phân loại vượt ngưỡng keyword/TF-IDF/BM25; đề xuất phân công theo khối lượng công việc và hiệu suất người xử lý (gợi ý cho admin, tự động gán khi chờ quá lâu); gợi ý cách xử lý theo loại ticket từ playbook và tài liệu nội bộ; dựa trên nghiên cứu về tổng hợp quyết định (decision aggregation).",
-            outcome: "Nghiên cứu quy trình xử lý ticket dựa trên ngữ cảnh và tải công việc.",
-            stack: ["Python", "LLM", "CrewAI (Multi-Agent)"],
+            status: "Đang thực hiện",
+            summary: "Tổng hợp nhiều nguồn đánh giá theo độ tin cậy để hỗ trợ ra quyết định.",
+            context: "Nhiều nguồn đánh giá có độ tin cậy khác nhau cần được tổng hợp để hỗ trợ quyết định.",
+            approach: "Nghiên cứu cơ chế lan truyền độ tin cậy để kết hợp các nguồn đánh giá.",
+            outcome: "Luận văn đang được thực hiện.",
+            stack: ["Python", "FastAPI", "LLM", "CrewAI"],
           },
         ],
       },
@@ -400,44 +388,22 @@ export const vi = {
     ],
   },
   research: {
-    title: "Nghiên cứu & Chứng chỉ",
+    title: "Thành tích nổi bật",
     items: [
-      {
-        type: "paper",
-        title: "ArtemisSearch · SoICT 2024",
-        summary: "Bài báo tác giả chính về tìm kiếm video đa phương thức.",
-        paperUrl: "artemissearch",
-        image: {
-          src: "/images/SoICT.JPG",
-          width: 3480,
-          height: 2319,
-          objectPosition: "30% center",
-          alt: {
-            en: "Paul presenting ArtemisSearch at the SoICT 2024 conference.",
-            vi: "Paul trình bày ArtemisSearch tại hội nghị SoICT 2024.",
-          },
-        },
-      },
-      {
-        type: "paper",
-        title: "FraudTrace · NSS 2025",
-        summary: "Bài báo tác giả chính về hệ thống multi-agent xác minh tin lừa đảo.",
-        paperUrl: "fraudtrace",
-      },
-      {
-        type: "credential",
-        title: "Microsoft Frontier Engineer",
-        summary: "Chứng nhận kỹ thuật về AI doanh nghiệp và phát triển giải pháp.",
-      },
-      {
-        type: "credential",
-        title: "Copilot Jumpstart",
-        summary: "Đào tạo chuyên sâu về giải pháp và kiến trúc.",
-      },
       {
         type: "award",
         title: "Giải Nhất · Cuộc thi Tự động hóa Quy trình AI của FTI",
-        summary: "Giải thưởng cho giải pháp tự động hóa vận hành bằng AI.",
+        summary: "Giải thưởng cho giải pháp tự động hóa quy trình bằng AI.",
+        image: {
+          src: "/images/Top1 - AI solutions for enterprise.JPG",
+          width: 1920,
+          height: 1077,
+          objectPosition: "center 40%",
+          alt: {
+            en: "Paul and his team receiving first prize in an AI process automation competition.",
+            vi: "Paul cùng đội nhận giải Nhất cuộc thi tự động hóa quy trình AI.",
+          },
+        },
       },
       {
         type: "education",
@@ -456,31 +422,46 @@ export const vi = {
       },
       {
         type: "education",
-        title: "Cử nhân Trí tuệ Nhân tạo · Loại Giỏi",
-        summary: "Tốt nghiệp sớm tại Trường Đại học Công nghệ Thông tin.",
+        title: "Cử nhân Trí tuệ Nhân tạo · Loại Giỏi, tốt nghiệp sớm",
+        summary: "Tốt nghiệp sớm chương trình Cử nhân Trí tuệ Nhân tạo.",
+      },
+      {
+        type: "paper",
+        title: "2 bài báo hội nghị quốc tế · Tác giả chính (SoICT 2024, NSS 2025)",
+        summary: "ArtemisSearch và FraudTrace — mở tab Học thuật để xem chi tiết.",
+        projectTab: "research",
+        image: {
+          src: "/images/SoICT.JPG",
+          width: 3480,
+          height: 2319,
+          objectPosition: "30% center",
+          alt: {
+            en: "Paul presenting his first-author research at SoICT 2024.",
+            vi: "Paul trình bày nghiên cứu tại SoICT 2024.",
+          },
+        },
+      },
+      {
+        type: "credential",
+        title: "Microsoft Frontier Engineer & Copilot Jumpstart",
+        summary: "Chứng nhận chuyên môn và chương trình đào tạo về AI doanh nghiệp.",
       },
     ],
   },
   industry: {
-    title: "Ngành Doanh nghiệp Đã Tư vấn",
-    intro:
-      "Mạng lưới kinh nghiệm theo khối ngành doanh nghiệp, thay cho việc sử dụng logo hoặc tên thương hiệu khách hàng.",
+    title: "Nhóm ngành đã tư vấn",
     items: [
       {
-        title: "Tài chính, Ngân hàng & Chứng khoán",
-        description: "Ngân hàng thương mại quy mô lớn, quỹ quản lý tài sản, công ty chứng khoán và tổ chức tài chính tiêu dùng.",
+        title: "Tài chính – Ngân hàng & Chứng khoán",
       },
       {
         title: "Xây dựng, Bất động sản & Năng lượng",
-        description: "Tổng thầu xây dựng quy mô lớn, doanh nghiệp phát triển bất động sản và doanh nghiệp năng lượng – hạ tầng.",
       },
       {
-        title: "Sản xuất Công nghiệp & Chuỗi Cung ứng",
-        description: "Nhà máy giày dép – dệt may xuất khẩu và các doanh nghiệp sản xuất công nghiệp.",
+        title: "Sản xuất & Chuỗi cung ứng",
       },
       {
         title: "Bán lẻ, Tiêu dùng & F&B",
-        description: "Doanh nghiệp bán lẻ đa quốc gia, chuỗi F&B, doanh nghiệp dược phẩm – tiêu dùng và nông nghiệp.",
       },
     ],
   },

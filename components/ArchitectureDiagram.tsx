@@ -73,6 +73,88 @@ const diagrams: Record<ArchitectureDiagramId, Record<"vi" | "en", DiagramData>> 
       nodes: ["Tiếp nhận ticket", "Phân tích ngữ cảnh", "Đề xuất người xử lý"],
     },
   },
+  "tailored-ai-solutions": {
+    en: {
+      title: "Tailored enterprise AI solution process",
+      nodes: [
+        "Understand: current state · issues · pain points",
+        "Design the right solution",
+        "SaaS & open source first · Data · AI · Security",
+        "Easy to use · fast enablement",
+      ],
+    },
+    vi: {
+      title: "Quy trình thiết kế giải pháp AI may đo",
+      nodes: [
+        "Tìm hiểu: hiện trạng · vấn đề · pain point",
+        "Thiết kế giải pháp phù hợp",
+        "SaaS & mã nguồn mở · Dữ liệu · AI · Bảo mật",
+        "Dễ dùng · hướng dẫn nhanh",
+      ],
+    },
+  },
+  "internal-knowledge-qa": {
+    en: {
+      title: "Internal knowledge Q&A feedback loop",
+      nodes: [
+        "Collect & analyze user data",
+        "Clean knowledge base",
+        "RAG query design",
+        "Answers with images",
+        "Feedback · evaluation · KB updates",
+      ],
+    },
+    vi: {
+      title: "Vòng lặp hỏi đáp tri thức nội bộ",
+      nodes: [
+        "Thu thập & phân tích dữ liệu",
+        "Làm sạch kho tri thức",
+        "Thiết kế truy vấn RAG",
+        "Trả lời kèm hình ảnh",
+        "Phản hồi · đánh giá · cập nhật kho tri thức",
+      ],
+    },
+  },
+  "manager-decision-support": {
+    en: {
+      title: "Manager decision-support flow",
+      nodes: ["Business context", "Existing Microsoft license", "AI recommendation", "Manager decision"],
+    },
+    vi: {
+      title: "Luồng hỗ trợ quyết định cho quản lý",
+      nodes: ["Bối cảnh nghiệp vụ", "License Microsoft sẵn có", "AI đề xuất", "Quản lý quyết định"],
+    },
+  },
+  "task-schedule-management": {
+    en: {
+      title: "Task and schedule assistant",
+      nodes: ["Requests & schedules", "AI assistant", "Owner · reminders · alerts", "Team"],
+    },
+    vi: {
+      title: "Trợ lý quản lý công việc và lịch",
+      nodes: ["Yêu cầu & lịch", "Trợ lý AI", "Phân công · nhắc lịch · cảnh báo", "Đội ngũ"],
+    },
+  },
+  "elearning-platform": {
+    en: {
+      title: "Trainer and presales learning platform",
+      nodes: ["Industry portfolio", "Training library", "Use cases", "Reusable enablement"],
+    },
+    vi: {
+      title: "Nền tảng học tập cho Trainer và Presales",
+      nodes: ["Portfolio theo ngành", "Kho tài liệu", "Use case", "Tái sử dụng đào tạo"],
+    },
+  },
+  "reliability-thesis": {
+    en: {
+      title: "Reliability propagation decision support",
+      nodes: ["Multiple assessments", "Reliability weights", "Evidence aggregation", "Decision support"],
+    },
+    vi: {
+      title: "Hỗ trợ quyết định bằng lan truyền độ tin cậy",
+      nodes: ["Nhiều nguồn đánh giá", "Trọng số tin cậy", "Tổng hợp bằng chứng", "Hỗ trợ quyết định"],
+    },
+  },
 };
 
 export function ArchitectureDiagram({ diagram, language, variant = "detail" }: ArchitectureDiagramProps) {

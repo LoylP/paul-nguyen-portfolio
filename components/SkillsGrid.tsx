@@ -5,6 +5,7 @@ import { getPortfolioContent } from "@/data/portfolioData";
 import { useLanguage } from "./Providers";
 import { Reveal } from "./motion/Reveal";
 import { Spotlight } from "./motion/Spotlight";
+import { IndustryGrid } from "./IndustryGrid";
 
 export function SkillsGrid() {
   const { language } = useLanguage();
@@ -26,17 +27,18 @@ export function SkillsGrid() {
             key={group.title}
           >
             <Spotlight>
-              <span className="card-index">0{index + 1}</span>
+              <span className="card-index">{String(index + 1).padStart(2, "0")}</span>
               <h3>{group.title}</h3>
               <ul className="tag-list" id={`skill-list-${index}`}>
-                {(expandedGroups[group.title] ? group.skills : group.skills.slice(0, 5))
+                {(expandedGroups[group.title] ? group.skills : group.skills.slice(0, 6))
                   .map((skill) => <li key={skill}>{skill}</li>)}
-                {group.skills.length > 5 ? (
+                {group.skills.length > 6 ? (
                   <li>
                     <button
                       aria-controls={`skill-list-${index}`}
                       aria-expanded={Boolean(expandedGroups[group.title])}
                       className="tag-expand"
+                      id={`skill-expand-${index}`}
                       onClick={() => setExpandedGroups((current) => ({
                         ...current,
                         [group.title]: !current[group.title],
@@ -45,7 +47,7 @@ export function SkillsGrid() {
                     >
                       {expandedGroups[group.title]
                         ? language === "vi" ? "Thu gọn" : "Show less"
-                        : `+${group.skills.length - 5}`}
+                        : `+${group.skills.length - 6}`}
                     </button>
                   </li>
                 ) : null}
@@ -53,6 +55,7 @@ export function SkillsGrid() {
             </Spotlight>
           </Reveal>
         ))}
+        <IndustryGrid />
       </div>
     </section>
   );

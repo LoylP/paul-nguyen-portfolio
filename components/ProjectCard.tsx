@@ -37,7 +37,9 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
         ) : null}
       </div>
       <div className="project-card-content">
-        <span className="project-tag">{project.tag}</span>
+        <span className={project.status ? "project-status" : "project-tag"}>
+          {project.status ?? project.tag}
+        </span>
         <h3>{project.title}</h3>
         <p className="project-summary">{project.summary}</p>
         <ul className="tag-list">

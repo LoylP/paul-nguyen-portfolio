@@ -76,7 +76,7 @@ export function Navbar() {
             </span>
             <span className="theme-toggle-label">{copy.ui.theme}</span>
           </button>
-          <Link className="nav-cv" href={CV_PATH}>
+          <Link className="nav-cv" download href={CV_PATH}>
             {language === "vi" ? "Tải CV" : "Download CV"}
           </Link>
         </div>

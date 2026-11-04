@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, ChevronDown, Factory, Landmark, ShoppingBag } from "lucide-react";
+import { Building2, Factory, Landmark, ShoppingBag } from "lucide-react";
 import { getPortfolioContent } from "@/data/portfolioData";
 import { useLanguage } from "./Providers";
 import { Reveal } from "./motion/Reveal";
@@ -13,38 +13,22 @@ export function IndustryGrid() {
   const copy = getPortfolioContent(language).industry;
 
   return (
-    <section className="expertise-subblock" aria-labelledby="industry-block-title">
-      <div className="expertise-subheading">
-        <p className="eyebrow">{language === "vi" ? "Ngành nghề" : "Industry footprint"}</p>
-        <h3 id="industry-block-title">{copy.title}</h3>
-        <p>{copy.intro}</p>
-      </div>
-      <div className="industry-grid">
-        {copy.items.map((item, index) => {
-          const Icon = icons[index];
-          return (
-            <Reveal
-              as="article"
-              className={`industry-card industry-card-${index + 1}`}
-              delay={index * 0.06}
-              key={item.title}
-            >
-              <Spotlight>
-                <details className="industry-detail">
-                  <summary>
-                    <span className="industry-icon" aria-hidden="true">
-                      <Icon size={22} strokeWidth={1.8} />
-                    </span>
-                    <span>{item.title}</span>
-                    <ChevronDown aria-hidden="true" className="industry-expand-icon" size={18} strokeWidth={1.8} />
-                  </summary>
-                  <p>{item.description}</p>
-                </details>
-              </Spotlight>
-            </Reveal>
-          );
-        })}
-      </div>
-    </section>
+    <Reveal as="article" className="content-card skill-card industry-skill-card" delay={0.24}>
+      <Spotlight>
+        <span className="card-index">05</span>
+        <h3>{copy.title}</h3>
+        <ul className="industry-list">
+          {copy.items.map((item, index) => {
+            const Icon = icons[index];
+            return (
+              <li key={item.title}>
+                <Icon aria-hidden="true" size={19} strokeWidth={1.8} />
+                <span>{item.title}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </Spotlight>
+    </Reveal>
   );
 }

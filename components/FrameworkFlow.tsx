@@ -5,7 +5,6 @@ import { ArrowRight, Compass, FlaskConical, GraduationCap, Workflow } from "luci
 import { useRef } from "react";
 import { getPortfolioContent } from "@/data/portfolioData";
 import { useLanguage } from "./Providers";
-import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./motion/Reveal";
 import { Spotlight } from "./motion/Spotlight";
 
@@ -18,21 +17,15 @@ export function FrameworkFlow() {
   const reducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: frameworkRef,
-    offset: ["start 75%", "end 35%"],
+    offset: ["start 85%", "end 45%"],
   });
 
   return (
-    <Reveal
-      as="section"
-      className="section-shell page-width"
-      id="method"
-      labelledBy="framework-title"
-    >
-      <SectionHeading
-        eyebrow={language === "vi" ? "02 / Phương pháp" : "02 / Method"}
-        title={copy.title}
-        titleId="framework-title"
-      />
+    <Reveal as="div" className="framework-subblock" labelledBy="framework-title">
+      <div className="expertise-subheading">
+        <p className="eyebrow">{language === "vi" ? "Phương pháp" : "Method"}</p>
+        <h3 id="framework-title">{copy.title}</h3>
+      </div>
       <div className="framework-flow" ref={frameworkRef}>
         <div aria-hidden="true" className="framework-progress-track">
           <motion.div
@@ -45,7 +38,6 @@ export function FrameworkFlow() {
         <ol className="framework-grid">
           {copy.steps.map((step, index) => (
             <FrameworkStep
-              description={step.description}
               index={index}
               key={step.phase}
               phase={step.phase}
@@ -60,13 +52,11 @@ export function FrameworkFlow() {
 }
 
 function FrameworkStep({
-  description,
   index,
   phase,
   summary,
   title,
 }: {
-  description: string;
   index: number;
   phase: string;
   summary: string;
@@ -75,7 +65,6 @@ function FrameworkStep({
   const ref = useRef<HTMLLIElement>(null);
   const isActive = useInView(ref, { amount: 0.45 });
   const Icon = phaseIcons[index];
-  const { language } = useLanguage();
 
   return (
     <li className="framework-step" ref={ref}>
@@ -85,10 +74,6 @@ function FrameworkStep({
           <span className="framework-phase">{phase}</span>
           <h3>{title}</h3>
           <p className="framework-summary">{summary}</p>
-          <details className="framework-details">
-            <summary>{language === "vi" ? "Xem chi tiết" : "View details"}</summary>
-            <p>{description}</p>
-          </details>
           {index < 3 ? (
             <span className="framework-arrow" aria-hidden="true">
               <ArrowRight size={16} strokeWidth={1.8} />

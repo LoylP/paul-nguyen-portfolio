@@ -24,13 +24,9 @@ export function ImageLightbox({ image, language, variant }: ImageLightboxProps) 
   const setTriggerElement = useCallback((element: HTMLButtonElement | null) => {
     triggerRef.current = element;
     if (element) {
-      setPortalTarget(
-        variant === "detail"
-          ? element.closest<HTMLElement>(".project-dialog")
-          : element.ownerDocument.body,
-      );
+      setPortalTarget(element.ownerDocument.body);
     }
-  }, [variant]);
+  }, []);
 
   useEffect(() => {
     if (!open) return;

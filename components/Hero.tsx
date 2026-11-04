@@ -35,13 +35,14 @@ export function Hero() {
           {copy.hero.ctas.map((cta, index) => (
             <Link
               className={`button ${index === 0 ? "button-primary" : "button-secondary"}`}
-              href={index === 0 ? cta.href ?? "#work" : CV_PATH}
+              download={index === 0 ? true : undefined}
+              href={index === 0 ? CV_PATH : cta.href ?? "#contact"}
               key={cta.label}
             >
               {cta.label}
               {index === 0
-                ? <ArrowDownRight aria-hidden="true" size={17} strokeWidth={1.8} />
-                : <Download aria-hidden="true" size={17} strokeWidth={1.8} />}
+                ? <Download aria-hidden="true" size={17} strokeWidth={1.8} />
+                : <ArrowDownRight aria-hidden="true" size={17} strokeWidth={1.8} />}
             </Link>
           ))}
         </div>

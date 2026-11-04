@@ -11,13 +11,13 @@ export const en = {
     displayName: "Paul Nguyen",
     altName: "Nguyen Hoang Phuc",
     headline: "AI Solution Architect & Technical Consultant",
-    tagline: "Taking enterprise AI from PoC to real-world adoption — on Microsoft & AWS",
-    meta: "Ho Chi Minh City · Remote/Hybrid · Open to AI Solution Architect / Presales roles",
+    tagline: "Taking enterprise AI from PoC to real-world adoption",
+    meta: "Ho Chi Minh City · Open to AI Solution Architect / Presales roles",
     summary:
       "AI Solution Architect helping enterprises take Microsoft 365 Copilot and Amazon Quick from PoC to real-world use. Advised 20+ enterprises and supported 9 AI & Cloud deals, backed by a solid AI research foundation.",
     ctas: [
-      { label: "Explore Selected Work", href: "#work" },
       { label: "Download CV" },
+      { label: "Contact", href: "#contact" },
     ],
   },
   metrics: [
@@ -31,30 +31,20 @@ export const en = {
     pillars: [
       {
         title: "Academic & Research Foundation",
-        description:
-          "Top Entrance Scorer, M.S. in Computer Science at UIT; early graduate, B.S. in Artificial Intelligence (Very Good classification). First author of two international conference papers (SoICT 2024, NSS 2025) from InSecLab, on Vision Transformer-based multimodal video retrieval and multi-agent LLM systems against online scams. This foundation lets me evaluate models rigorously and put data security first when bringing AI into the enterprise.",
       },
       {
         title: "Hands-on Engineering",
-        description:
-          "From Deligent’s GenAI apparel-design feature to an AI Engineer Internship at FTI, where an automated ticket-processing pipeline cut manual tool operations by 80% and won the FTI AI Process Automation Competition. Hands-on with Python/FastAPI, Next.js, RAG, Docker, GitLab CI/CD and GPU model serving.",
       },
       {
         title: "Solution Consulting & Presales",
-        description:
-          "AI Solution Consultant & Presales at FTI and AI Solution Architect at Khoi Solutions. Work directly with executive stakeholders, advising 20+ enterprises across banking, construction, manufacturing and retail; defended technical solutions for 9 AI & Cloud deals. Specialized in Microsoft 365 Copilot / Copilot Studio and Amazon Quick; co-hosted a Copilot workshop series with Microsoft Vietnam; lead an intern team and deliver technical training for clients.",
       },
     ],
     trajectory: {
       title: "Career Trajectory",
-      description:
-        "Growing into a Lead Solution Architect who owns enterprise AI solutions end to end — from discovery and PoC to adoption — connecting research depth with business growth and cost efficiency.",
     },
   },
   experience: {
     title: "Experience",
-    intro:
-      "I connect academic AI research with hands-on engineering and enterprise solution consulting. I help teams move from a clear business problem to a secure, adoptable AI solution.",
     careerVision:
       "Career vision: grow into a Lead Solution Architect owning enterprise AI from discovery through adoption.",
     items: [
@@ -63,7 +53,6 @@ export const en = {
         organization: "Khoi Solutions",
         period: "08/2026 – 10/2026",
         location: "Remote / Hybrid",
-        description: "Shape AI architecture and adoption plans for enterprise clients.",
         bullets: [
           "Shape solution architecture around business priorities and data readiness.",
           "Guide enterprise teams through adoption planning and delivery.",
@@ -73,7 +62,6 @@ export const en = {
         title: "AI Solution Consultant & Presales",
         organization: "FPT Telecom International (FTI)",
         period: "07/2025 – 09/2026",
-        description: "Led AI solution consulting, presales, PoCs and technical enablement.",
         bullets: [
           "Advised more than 20 enterprises across solution consulting and presales.",
           "Supported AI and cloud opportunities from discovery through PoC and solution defense.",
@@ -84,7 +72,6 @@ export const en = {
         title: "AI Engineer Intern",
         organization: "FPT Telecom International (FTI)",
         period: "01/2025 – 06/2025",
-        description: "Built an AI pipeline for operational ticket intake and classification.",
         bullets: [
           "Built an AI pipeline for operational ticket intake and classification.",
           "Reduced manual tool operations by 80%.",
@@ -95,7 +82,6 @@ export const en = {
         title: "Frontend + AI Developer Intern",
         organization: "Deligent",
         period: "08/2024 – 12/2024",
-        description: "Built a generative design workflow for apparel concepts.",
         bullets: [
           "Built a responsive web experience for AI-assisted apparel design.",
           "Connected natural-language prompts to generative image workflows.",
@@ -110,83 +96,76 @@ export const en = {
         phase: "01",
         title: "Discovery",
         summary: "Understand the business problem and data readiness",
-        description:
-          "Work directly with C-level stakeholders to understand core business problems, identify operational bottlenecks and assess data readiness and governance.",
       },
       {
         phase: "02",
         title: "Architecture",
         summary: "Choose the right stack and data guardrails",
-        description:
-          "Select and tailor the right technology stack (Microsoft 365 Copilot / Copilot Studio, Amazon Quick / Amazon Bedrock or Private RAG); establish data-safety guardrails and access controls.",
       },
       {
         phase: "03",
         title: "PoC / Pilot",
         summary: "Validate with real users before scaling",
-        description:
-          "Build a PoC or pilot with real users; evaluate accuracy, latency and cost (license / token ROI) before scaling.",
       },
       {
         phase: "04",
         title: "Enablement & Adoption",
         summary: "Role-based training and usage tracking",
-        description:
-          "Build role-based training playbooks (Finance, Operations, Engineering), run handover workshops, track usage through dashboards and provide post-training support against agreed adoption KPIs.",
       },
     ],
   },
   skills: {
-    title: "Skills & Technical Toolkit",
+    title: "Technical expertise",
     groups: [
       {
-        title: "Enterprise AI & Cloud Ecosystems",
+        title: "Enterprise AI Platforms",
         skills: [
           "Microsoft 365 Copilot",
-          "Microsoft Copilot Studio",
+          "Copilot Studio",
           "Power Platform",
+          "Power Automate",
           "Azure OpenAI",
-          "Amazon Quick (formerly Amazon Q Business)",
+          "Amazon Quick",
           "Amazon Bedrock",
         ],
       },
       {
-        title: "Agentic Frameworks & Process Automation",
+        title: "AI Agents & Automation",
         skills: [
           "Multi-Agent Systems",
-          "Agent Factory Orchestration",
-          "n8n",
-          "Dify",
-          "LangChain",
           "CrewAI",
-          "Workflow Automation",
-          "Process Re-engineering",
+          "LangChain",
+          "Dify",
+          "n8n",
+          "Apache Airflow",
         ],
       },
       {
-        title: "Core AI / ML & Engineering Depth",
+        title: "AI/ML & Data",
         skills: [
           "Python",
-          "FastAPI",
           "PyTorch",
           "Hugging Face",
-          "Unsloth (LLM Fine-tuning)",
-          "Enterprise RAG Architecture",
-          "Vision Transformer (ViT)",
-          "Model Quantization & Serving",
+          "RAG",
+          "LLM Fine-tuning (Unsloth)",
+          "Vision Transformer",
+          "Milvus",
+          "Elasticsearch",
         ],
       },
       {
-        title: "Full-stack, DevOps & Data Security",
+        title: "Engineering & DevOps",
         skills: [
-          "Docker",
-          "GitLab CI/CD",
-          "Linux",
+          "C#",
+          ".NET",
+          "FastAPI",
           "Next.js",
           "React",
           "Tailwind CSS",
-          "RESTful API Integration",
-          "Data Governance & Access Control for AI deployments",
+          "PostgreSQL",
+          "Docker",
+          "GitLab CI/CD",
+          "Linux",
         ],
       },
     ],
@@ -224,7 +203,7 @@ export const en = {
             media: "Award photo with the competition judging panel.",
           },
           {
-            title: "Microsoft 365 Copilot for a Construction General Contractor & Workshop Series",
+            title: "Microsoft 365 Copilot Workshop & Training Series",
             tag: "Enterprise adoption",
             summary: "Took 600+ users from PoC to rollout of Microsoft 365 Copilot.",
             architectureDiagram: "copilot-adoption",
@@ -240,7 +219,7 @@ export const en = {
             },
             role: "Technical Trainer · Workshop Co-host",
             customerSegment: "Listed construction general contractor (600+ users) and enterprise workshop clients",
-            ecosystem: ["Microsoft 365 Copilot", "Copilot Studio", "Azure OpenAI", "Microsoft Power Platform"],
+            ecosystem: ["Microsoft 365 Copilot", "Copilot Studio", "Microsoft Power Platform"],
             context:
               "Despite investing in Microsoft Copilot and AI infrastructure, employees faced barriers applying it to daily work, usage remained low and data-leakage risks were a concern.",
             solution:
@@ -251,73 +230,84 @@ export const en = {
             media: "Copilot Workshop co-hosting photo (use only with permission and with customer-identifying information concealed).",
           },
           {
-            title: "Enterprise Knowledge Assistants for Manufacturing & Supply Chain (Amazon Quick & Enterprise RAG)",
-            tag: "Manufacturing · Knowledge assistant",
-            summary: "Amazon Quick knowledge assistant for manufacturing technical documents.",
-            architectureDiagram: "knowledge-assistant",
-            role: "AI Solution Consultant / Presales",
-            customerSegment:
-              "Manufacturing and supply-chain enterprises (export footwear and apparel, building materials and industrial manufacturing)",
-            ecosystem: ["Amazon Quick", "Amazon Bedrock", "Enterprise RAG"],
-            context:
-              "Technical specifications, supply-chain records, material specs and operating documents were distributed across S3, Salesforce, Jira and SharePoint, making manual retrieval time-consuming.",
-            solution:
-              "Advised on and designed Amazon Quick enterprise knowledge assistant architecture with permission-aware data connectors, including automated extraction from complex technical specification tables and production reports.",
-            outcome: "Designed a permission-aware assistant to make technical knowledge easier to retrieve.",
-            measurement:
-              "Evaluated answer accuracy and information-retrieval time on real business scenarios in PoCs; defended the technical solution to plant leadership.",
+            title: "Tailored AI solutions for enterprise problems",
+            tag: "AI solution consulting",
+            summary: "From pain points to solutions teams can use right away — existing SaaS and open-source first, customized for data, AI and security.",
+            architectureDiagram: "tailored-ai-solutions",
+            switchTab: "engineering",
+            role: "AI Solution Architect / Presales",
+            context: "Enterprises need to turn pain points into AI solutions that are practical, easy to adopt and aligned with data, AI and security requirements.",
+            approach: "Understand the current state and pain points; design the right solution; prioritize existing SaaS and open source with Data · AI · Security customization; enable fast, practical adoption.",
+            outcome: "A consulting process focused on practical solutions and existing platforms.",
+            stack: ["Microsoft 365 Copilot", "Amazon Quick", "Open source"],
           },
         ],
       },
       {
         id: "engineering",
-        label: "Engineering",
+        label: "AI Systems Built",
         projects: [
           {
-            title: "AI-Powered Operational Ticket Processing Automation",
+            title: "AI-powered operations ticket automation",
             architectureDiagram: "ticket-automation",
             tag: "AI automation",
-            summary: "AI pipeline for ticket intake and routing — 80% fewer manual operations.",
-            role: "AI Engineer Intern",
-            organization: "Telecommunications enterprise",
-            period: "01/2025 – 06/2025",
-            context:
-              "Worked directly with executive stakeholders to analyze the problem and automate technical-ticket intake, classification and routing.",
-            solution: "Built an AI Agent-powered pipeline for operational ticket processing.",
-            outcome: "Streamlined operational ticket handling and shortened the path to resolution.",
-            stack: ["Python", "FastAPI", "Docker", "GitLab CI/CD", "Large Language Models", "AI Agents"],
+            summary: "Intake, classification and routing for customer service, internal and IT helpdesk tickets.",
+            context: "Customer service, internal and IT helpdesk tickets need intake, classification and routing to the right team.",
+            approach: "Built an AI pipeline for ticket intake, classification and routing.",
+            outcome: "80% fewer manual operations.",
+            stack: ["C#", ".NET", "Python (Apache Airflow)", "Dify", "Docker"],
           },
           {
-            title: "Generative AI Fashion Design Platform",
-            architectureDiagram: "genai-fashion",
-            tag: "Generative AI",
-            summary: "GenAI apparel design from text prompts.",
-            role: "Frontend + AI Developer Intern",
-            organization: "Technology startup",
-            period: "08/2024 – 12/2024",
-            context:
-              "Developed an interactive web experience and connected diffusion-model APIs to generate apparel and accessory designs from user prompts.",
-            solution:
-              "Integrated a responsive web interface with image-generation APIs to take designs from natural-language prompts into a product workflow.",
-            outcome:
-              "Delivered an end-to-end generative design workflow from prompt to visual concept.",
-            stack: ["Next.js", "React", "Tailwind CSS", "Image Generation APIs", "FastAPI", "Diffusion Models"],
+            title: "Decision support for managers",
+            architectureDiagram: "manager-decision-support",
+            tag: "Business automation",
+            summary: "AI recommends the right next action on existing Microsoft licenses — no custom build needed.",
+            context: "Managers need recommendations for the right next action without building a new system.",
+            approach: "Use Copilot Studio, Power Platform and Power Automate on existing Microsoft licenses.",
+            outcome: "Decision support without a custom build.",
+            stack: ["Copilot Studio", "Power Platform", "Power Automate", "Microsoft 365 Copilot"],
           },
           {
-            title: "Decision Support System for Ticket Management",
-            architectureDiagram: "ticket-decision-support",
-            tag: "Master’s thesis",
-            summary: "Decision support for ticket classification and assignment.",
-            subtitle: "Master’s thesis",
-            role: "Master’s thesis researcher",
-            organization: "UIT – M.S. in Computer Science",
-            period: "2025 – 2027",
-            context:
-              "Redesigning post-rollout AI support: intake from multiple channels (forms, Teams), classify ticket types and route them to the right resolver.",
-            approach:
-              "Move classification beyond keyword / TF-IDF / BM25 scoring; recommend assignments using resolver workload and performance (admin suggestions, with automatic assignment after excessive wait); suggest playbook and internal-document resolutions by ticket type; informed by decision-aggregation research.",
-            outcome: "Researching a more context-aware, workload-sensitive workflow for ticket resolution.",
-            stack: ["Python", "LLM", "CrewAI (Multi-Agent)"],
+            title: "Task & schedule management with auto-assignment",
+            architectureDiagram: "task-schedule-management",
+            tag: "Business automation",
+            summary: "Assigns the right owner, sends reminders and warnings, and answers questions via built-in AI assistants.",
+            context: "Teams need automated task assignment, schedule management, reminders and information retrieval.",
+            approach: "Combine existing AI assistants with automation flows for assignment, reminders and alerts.",
+            outcome: "Reduces manual task-management work.",
+            stack: ["Copilot Studio", "Power Automate", "Microsoft 365 Copilot"],
+          },
+          {
+            title: "Internal knowledge Q&A system",
+            architectureDiagram: "internal-knowledge-qa",
+            tag: "Internal knowledge",
+            summary: "RAG-based Q&A over internal processes and guides, with illustrated answers and a feedback-driven knowledge base.",
+            context: "Users need to retrieve answers from internal processes and guides in a maintained knowledge base.",
+            approach: "Collect and analyze user data → clean it into a knowledge base → design RAG queries → return answers with images → gather feedback, self-evaluate and update the knowledge base.",
+            outcome: "Illustrated answers improve through a continuous feedback loop.",
+            stack: ["RAG", "Knowledge Base", "Feedback loop"],
+          },
+          {
+            title: "E-learning platform for trainers & presales",
+            architectureDiagram: "elearning-platform",
+            tag: "E-learning",
+            status: "In development",
+            summary: "Training library and industry use-case portfolio, reusable across clients in the same sector.",
+            context: "Goal: standard industry templates, an up-to-date use-case portfolio, faster preparation and professional ready-to-pitch materials. Scope includes AI Enterprise products, data readiness, safe AI usage and access control.",
+            approach: "Content design and training videos are in progress; application development is planned.",
+            outcome: "Status: content design and training videos in progress; application build planned.",
+            stack: ["Next.js", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL"],
+          },
+          {
+            title: "Master's thesis: Decision support via reliability propagation",
+            architectureDiagram: "reliability-thesis",
+            tag: "Master's thesis",
+            status: "In progress",
+            summary: "Aggregates multiple assessments weighted by reliability to support decisions.",
+            context: "Multiple assessments with different levels of reliability need to be combined for decision support.",
+            approach: "Research reliability propagation to combine multiple assessments.",
+            outcome: "Thesis work is in progress.",
+            stack: ["Python", "FastAPI", "LLM", "CrewAI"],
           },
         ],
       },
@@ -398,44 +388,22 @@ export const en = {
     ],
   },
   research: {
-    title: "Research & Credentials",
+    title: "Highlights & Achievements",
     items: [
       {
-        type: "paper",
-        title: "ArtemisSearch · SoICT 2024",
-        summary: "First-author paper on multimodal video retrieval.",
-        paperUrl: "artemissearch",
+        type: "award",
+        title: "1st Prize · FTI AI Process Automation Competition",
+        summary: "Awarded for an AI-powered process automation solution.",
         image: {
-          src: "/images/SoICT.JPG",
-          width: 3480,
-          height: 2319,
-          objectPosition: "30% center",
+          src: "/images/Top1 - AI solutions for enterprise.JPG",
+          width: 1920,
+          height: 1077,
+          objectPosition: "center 40%",
           alt: {
-            en: "Paul presenting ArtemisSearch at the SoICT 2024 conference.",
-            vi: "Paul trình bày ArtemisSearch tại hội nghị SoICT 2024.",
+            en: "Paul and his team receiving first prize in an AI process automation competition.",
+            vi: "Paul cùng đội nhận giải Nhất cuộc thi tự động hóa quy trình AI.",
           },
         },
-      },
-      {
-        type: "paper",
-        title: "FraudTrace · NSS 2025",
-        summary: "First-author paper on multi-agent verification of online scam news.",
-        paperUrl: "fraudtrace",
-      },
-      {
-        type: "credential",
-        title: "Microsoft Frontier Engineer",
-        summary: "Technical credential in enterprise AI and solution engineering.",
-      },
-      {
-        type: "credential",
-        title: "Copilot Jumpstart",
-        summary: "Advanced solution and architecture training.",
-      },
-      {
-        type: "award",
-        title: "1st Prize · FTI AI Process Automation",
-        summary: "Awarded for an AI-powered operational automation solution.",
       },
       {
         type: "education",
@@ -454,35 +422,46 @@ export const en = {
       },
       {
         type: "education",
-        title: "B.S. Artificial Intelligence · Very Good",
-        summary: "Early graduate, University of Information Technology.",
+        title: "B.S. in Artificial Intelligence · Very Good, early graduate",
+        summary: "Early graduate with a Very Good classification.",
+      },
+      {
+        type: "paper",
+        title: "2 international conference papers · First author (SoICT 2024, NSS 2025)",
+        summary: "ArtemisSearch and FraudTrace — open the Academic tab for details.",
+        projectTab: "research",
+        image: {
+          src: "/images/SoICT.JPG",
+          width: 3480,
+          height: 2319,
+          objectPosition: "30% center",
+          alt: {
+            en: "Paul presenting his first-author research at SoICT 2024.",
+            vi: "Paul trình bày nghiên cứu tại SoICT 2024.",
+          },
+        },
+      },
+      {
+        type: "credential",
+        title: "Microsoft Frontier Engineer & Copilot Jumpstart",
+        summary: "Professional credential and training program in enterprise AI.",
       },
     ],
   },
   industry: {
-    title: "Enterprise Industry Footprint",
-    intro:
-      "A view of enterprise experience by industry, rather than customer logos or brand names.",
+    title: "Industries advised",
     items: [
       {
         title: "Banking & Capital Markets",
-        description:
-          "Leading commercial banks, asset-management funds, securities firms and consumer-finance institutions.",
       },
       {
-        title: "Infrastructure, Real Estate & Energy",
-        description:
-          "Large general contractors, real-estate developers, and energy and infrastructure enterprises.",
+        title: "Construction, Real Estate & Energy",
       },
       {
         title: "Manufacturing & Supply Chain",
-        description:
-          "Export footwear and textile factories, alongside industrial manufacturing enterprises.",
       },
       {
-        title: "Retail & Consumer Goods",
-        description:
-          "Multinational retailers, F&B chains, pharmaceutical and consumer-goods businesses, and agriculture.",
+        title: "Retail, Consumer & F&B",
       },
     ],
   },

@@ -3,7 +3,6 @@
 import { ContactFooter } from "@/components/ContactFooter";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
-import { FrameworkFlow } from "@/components/FrameworkFlow";
 import { Hero } from "@/components/Hero";
 import { ProjectTabs } from "@/components/ProjectTabs";
 import { ResearchCredentials } from "@/components/ResearchCredentials";
@@ -13,7 +12,6 @@ export default function Home() {
     <main>
       <Hero />
       <ProjectTabs />
-      <FrameworkFlow />
       <ExperienceTimeline />
       <ExpertiseSection />
       <ResearchCredentials />

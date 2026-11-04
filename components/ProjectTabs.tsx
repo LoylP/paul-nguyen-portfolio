@@ -1,5 +1,7 @@
 "use client";
 
+import { motion, useReducedMotion } from "motion/react";
+import { createPortal } from "react-dom";
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { getPortfolioContent, type PortfolioProject } from "@/data/portfolioData";
@@ -19,6 +21,19 @@ export function ProjectTabs() {
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const activeTabData = tabs.find((tab) => tab.id === activeTab) ?? tabs[0];
 
+  useEffect(() => {
+    const handleSelectTab = (event: Event) => {
+      if (!(event instanceof CustomEvent)) return;
+      const tabId: unknown = event.detail;
+      if (typeof tabId === "string" && tabs.some((tab) => tab.id === tabId)) {
+        setActiveTab(tabId);
+      }
+    };
+
+    document.addEventListener("portfolio:select-tab", handleSelectTab);
+    return () => document.removeEventListener("portfolio:select-tab", handleSelectTab);
+  }, [tabs]);
+
   function moveTabFocus(currentIndex: number, direction: -1 | 1) {
     const nextIndex = (currentIndex + direction + tabs.length) % tabs.length;
     const nextTab = tabs[nextIndex];
@@ -37,9 +52,6 @@ export function ProjectTabs() {
         eyebrow={language === "vi" ? "01 / Dự án" : "01 / Selected Work"}
         title={copy.title}
         titleId="work-title"
-        description={language === "vi"
-          ? "Các dự án tiêu biểu, tóm tắt để quét nhanh và có thể mở để xem chi tiết."
-          : "Selected projects, summarized for quick scanning with details available on demand."}
       />
       <div className="project-tabs" role="tablist" aria-label={copy.title}>
         {tabs.map((tab, index) => (
@@ -112,14 +124,19 @@ function ProjectDrawer({
   project: PortfolioProject;
   onClose: () => void;
 }) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const suppressCloseRef = useRef(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const [portalTarget] = useState<HTMLElement | null>(
+    () => typeof document === "undefined" ? null : document.body,
+  );
+  const reducedMotion = useReducedMotion();
   const closeLabel = language === "vi" ? "Đóng chi tiết dự án" : "Close project details";
   const labels = language === "vi"
     ? {
         problem: "Bài toán",
         approach: "Hướng tiếp cận",
         architecture: "Kiến trúc",
+        stack: "Công nghệ",
         role: "Vai trò của tôi",
         timeline: "Thời gian & quy mô",
         outcome: "Kết quả",
@@ -129,6 +146,7 @@ function ProjectDrawer({
         problem: "Problem",
         approach: "Approach",
         architecture: "Architecture",
+        stack: "Tech stack",
         role: "My role",
         timeline: "Timeline & scale",
         outcome: "Outcome",
@@ -136,16 +154,50 @@ function ProjectDrawer({
       };
 
   useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    dialog.showModal();
+    const previousFocus = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     return () => {
-      if (dialog.open) {
-        suppressCloseRef.current = true;
-        dialog.close();
-      }
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
     };
   }, []);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!portalTarget || !panel) return;
+    closeRef.current?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const focusable = panel?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (!focusable?.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !panel?.contains(document.activeElement))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (document.activeElement === last || !panel?.contains(document.activeElement))) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose, portalTarget]);
 
   const details = [
     [labels.problem, project.context],
@@ -157,58 +209,97 @@ function ProjectDrawer({
     .filter(Boolean)
     .join(" · ");
 
-  return (
-    <dialog
-      aria-labelledby="project-dialog-title"
-      aria-modal="true"
-      className="project-dialog"
-      onClose={() => {
-        if (suppressCloseRef.current) {
-          suppressCloseRef.current = false;
-          return;
-        }
-        onClose();
+  if (!portalTarget) return null;
+
+  return createPortal(
+    <div
+      className="project-drawer-overlay"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
       }}
-      ref={dialogRef}
     >
-      <div className="drawer-topline">
-        <span>{project.tag}</span>
-        <button autoFocus aria-label={closeLabel} className="icon-button" onClick={() => dialogRef.current?.close()} type="button">
-          <X aria-hidden="true" size={20} strokeWidth={1.8} />
-        </button>
-      </div>
-      <h2 id="project-dialog-title">{project.title}</h2>
-      {details.slice(0, 2).map(([label, text]) => (
-        <section className="drawer-detail" key={label}>
-          <h3>{label}</h3>
-          <p>{text}</p>
+      <motion.div
+        aria-labelledby="project-dialog-title"
+        aria-modal="true"
+        className="project-dialog"
+        initial={false}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: reducedMotion ? 0 : 0.2, ease: "easeOut" }}
+        ref={panelRef}
+        role="dialog"
+        tabIndex={-1}
+      >
+        <div className="drawer-topline">
+          <span>{project.status ?? project.tag}</span>
+          <button
+            aria-label={closeLabel}
+            className="icon-button"
+            onClick={onClose}
+            ref={closeRef}
+            type="button"
+          >
+            <X aria-hidden="true" size={20} strokeWidth={1.8} />
+          </button>
+        </div>
+        <h2 id="project-dialog-title">{project.title}</h2>
+        {details.slice(0, 2).map(([label, text]) => (
+          <section className="drawer-detail" key={label}>
+            <h3>{label}</h3>
+            <p>{text}</p>
+          </section>
+        ))}
+        {tags.length ? (
+          <section className="drawer-detail">
+            <h3>{labels.stack}</h3>
+            <ul className="tag-list">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+          </section>
+        ) : null}
+        <section className="drawer-detail">
+          <h3>{labels.architecture}</h3>
+          {project.switchTab ? (
+            <ArchitectureDiagram diagram={project.architectureDiagram ?? "tailored-ai-solutions"} language={language} />
+          ) : project.architectureImage ? (
+            <ImageLightbox image={project.architectureImage} language={language} variant="detail" />
+          ) : project.architectureDiagram ? (
+            <ArchitectureDiagram diagram={project.architectureDiagram} language={language} />
+          ) : (
+            <ul className="tag-list">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+          )}
         </section>
-      ))}
-      <section className="drawer-detail">
-        <h3>{labels.architecture}</h3>
-        {project.architectureImage ? (
-          <ImageLightbox image={project.architectureImage} language={language} variant="detail" />
-        ) : project.architectureDiagram ? (
-          <ArchitectureDiagram diagram={project.architectureDiagram} language={language} />
-        ) : (
-          <ul className="tag-list">{tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-        )}
-      </section>
-      <section className="drawer-detail">
-        <h3>{labels.role}</h3>
-        <p>{project.role ?? (language === "vi" ? "Thành viên dự án" : "Project contributor")}</p>
-      </section>
-      <section className="drawer-detail">
-        <h3>{labels.timeline}</h3>
-        <p>{[project.organization, timelineAndScale].filter(Boolean).join(" · ")}</p>
-      </section>
-      {details.slice(2).map(([label, text]) => (
-        <section className="drawer-detail" key={label}>
-          <h3>{label}</h3>
-          <p>{text}</p>
-        </section>
-      ))}
-      <p className="metrics-on-request">{labels.details}</p>
-    </dialog>
+        {project.role ? (
+          <section className="drawer-detail">
+            <h3>{labels.role}</h3>
+            <p>{project.role}</p>
+          </section>
+        ) : null}
+        {project.organization || timelineAndScale ? (
+          <section className="drawer-detail">
+            <h3>{labels.timeline}</h3>
+            <p>{[project.organization, timelineAndScale].filter(Boolean).join(" · ")}</p>
+          </section>
+        ) : null}
+        {details.slice(2).map(([label, text]) => (
+          <section className="drawer-detail" key={label}>
+            <h3>{label}</h3>
+            <p>{text}</p>
+          </section>
+        ))}
+        {project.switchTab ? (
+          <button
+            className="button button-secondary systems-tab-link"
+            onClick={() => {
+              document.dispatchEvent(new CustomEvent("portfolio:select-tab", { detail: project.switchTab }));
+              onClose();
+              document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            type="button"
+          >
+            {language === "vi" ? "Xem các hệ thống đã xây dựng" : "See systems built"}
+          </button>
+        ) : null}
+        <p className="metrics-on-request">{labels.details}</p>
+      </motion.div>
+    </div>,
+    portalTarget,
   );
 }

@@ -29,16 +29,13 @@ export function ResearchCredentials() {
     <Reveal
       as="section"
       className="section-shell page-width research-section"
-      id="research"
-      labelledBy="research-title"
+      id="achievements"
+      labelledBy="achievements-title"
     >
       <SectionHeading
-        eyebrow={language === "vi" ? "05 / Nghiên cứu & Chứng chỉ" : "05 / Research & Credentials"}
+        eyebrow={language === "vi" ? "04 / Thành tích" : "04 / Achievements"}
         title={copy.title}
-        titleId="research-title"
-        description={language === "vi"
-          ? "Công bố học thuật, chứng nhận chuyên môn, giải thưởng và nền tảng đào tạo."
-          : "Selected publications, credentials, awards and academic background."}
+        titleId="achievements-title"
       />
       <div className="credential-grid">
         {copy.items.map((item, index) => (
@@ -86,6 +83,25 @@ function ResearchCard({
       </div>
     </Spotlight>
   );
+
+  if (item.projectTab) {
+    return (
+      <Reveal as="div" delay={index * 0.04}>
+        <a
+          aria-label={`${item.title} — ${item.summary}`}
+          className="credential-action"
+          href="#work"
+          onClick={(event) => {
+            event.preventDefault();
+            document.dispatchEvent(new CustomEvent("portfolio:select-tab", { detail: item.projectTab }));
+            document.getElementById("work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        >
+          {content}
+        </a>
+      </Reveal>
+    );
+  }
 
   if (item.paperUrl) {
     return (
