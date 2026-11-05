@@ -50,9 +50,8 @@ export const vi = {
     items: [
       {
         title: "AI Solution Architect",
-        organization: "Khoi Solutions",
-        period: "08/2026 – 10/2026",
-        location: "Remote / Hybrid",
+        organization: "Khoi Solutions (Remote / Hybrid)",
+        period: "08/2026 – 11/2026",
         bullets: [
           "Định hình kiến trúc giải pháp theo ưu tiên kinh doanh và mức độ sẵn sàng dữ liệu.",
           "Đồng hành cùng doanh nghiệp trong lập kế hoạch và triển khai ứng dụng.",
@@ -61,7 +60,7 @@ export const vi = {
       {
         title: "AI Solution Consultant & Presales",
         organization: "FPT Telecom International (FTI)",
-        period: "07/2025 – 09/2026",
+        period: "07/2025 – 10/2026",
         bullets: [
           "Tư vấn giải pháp và presales cho hơn 20 doanh nghiệp.",
           "Hỗ trợ cơ hội AI và Cloud từ discovery, PoC đến bảo vệ giải pháp.",
@@ -80,7 +79,7 @@ export const vi = {
       },
       {
         title: "Frontend + AI Developer Intern",
-        organization: "Deligent",
+        organization: "Deligent (Remote / Hybrid)",
         period: "08/2024 – 12/2024",
         bullets: [
           "Phát triển trải nghiệm web đáp ứng cho thiết kế trang phục bằng AI.",

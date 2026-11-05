@@ -50,9 +50,8 @@ export const en = {
     items: [
       {
         title: "AI Solution Architect",
-        organization: "Khoi Solutions",
-        period: "08/2026 – 10/2026",
-        location: "Remote / Hybrid",
+        organization: "Khoi Solutions (Remote / Hybrid)",
+        period: "08/2026 – 11/2026",
         bullets: [
           "Shape solution architecture around business priorities and data readiness.",
           "Guide enterprise teams through adoption planning and delivery.",
@@ -61,7 +60,7 @@ export const en = {
       {
         title: "AI Solution Consultant & Presales",
         organization: "FPT Telecom International (FTI)",
-        period: "07/2025 – 09/2026",
+        period: "07/2025 – 10/2026",
         bullets: [
           "Advised more than 20 enterprises across solution consulting and presales.",
           "Supported AI and cloud opportunities from discovery through PoC and solution defense.",
@@ -80,7 +79,7 @@ export const en = {
       },
       {
         title: "Frontend + AI Developer Intern",
-        organization: "Deligent",
+        organization: "Deligent (Remote / Hybrid)",
         period: "08/2024 – 12/2024",
         bullets: [
           "Built a responsive web experience for AI-assisted apparel design.",
