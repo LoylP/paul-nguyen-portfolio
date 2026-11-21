@@ -10,11 +10,11 @@ export const en = {
   hero: {
     displayName: "Paul Nguyen",
     altName: "Nguyen Hoang Phuc",
-    headline: "AI Solution Architect & Technical Consultant",
+    headline: "AI Solutions Consultant & AI Engineer",
     tagline: "Taking enterprise AI from PoC to real-world adoption",
-    meta: "Ho Chi Minh City · Open to AI Solution Architect / Presales roles",
+    meta: "Ho Chi Minh City · Open to AI Solution Consultant / Architect & AI Engineer roles",
     summary:
-      "AI Solution Architect helping enterprises take Microsoft 365 Copilot and Amazon Quick from PoC to real-world use. Advised 20+ enterprises and supported 9 AI & Cloud deals, backed by a solid AI research foundation.",
+      "AI Solutions Consultant & AI Engineer helping enterprises take Microsoft 365 Copilot and Amazon Q from PoC to real-world use. Advised 20+ enterprises and supported 9 AI & Cloud deals, backed by a solid AI research foundation.",
     ctas: [
       { label: "Download CV" },
       { label: "Contact", href: "#contact" },
@@ -46,15 +46,16 @@ export const en = {
   experience: {
     title: "Experience",
     careerVision:
-      "Career vision: grow into a Lead Solution Architect owning enterprise AI from discovery through adoption.",
+      "Career trajectory: AI Engineer Intern -> AI Solution Consultant & Presales -> Technical Lead – AI Implementation & Solutions.",
     items: [
       {
-        title: "AI Solution Architect",
+        title: "Technical Lead – AI Implementation & Solutions",
         organization: "Khoi Solutions (Remote / Hybrid)",
         period: "08/2026 – 11/2026",
         bullets: [
-          "Shape solution architecture around business priorities and data readiness.",
-          "Guide enterprise teams through adoption planning and delivery.",
+          "Led a compact technical team in architecting and implementing enterprise AI SaaS features and AI Adoption workflows (Microsoft 365 Copilot, Amazon Q, Gemini).",
+          "Designed end-to-end solution architectures, PoC demos, and technical roadmaps tailored to B2B clients across Banking, Manufacturing, and Retail sectors.",
+          "Managed internal IT infrastructure, system operations, security compliance, and established standardized delivery playbooks for client rollouts.",
         ],
       },
       {

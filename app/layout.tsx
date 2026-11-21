@@ -27,26 +27,26 @@ const metadataBase = publicSiteUrl
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title: {
-    default: "Paul Nguyen | AI Solution Architect · Kiến trúc sư Giải pháp AI",
+    default: "Paul Nguyen | AI Solutions Consultant & AI Engineer",
     template: "%s | Paul Nguyen",
   },
   description:
-    "AI Solution Architect helping enterprises take AI from PoC to real-world adoption. Kiến trúc sư giải pháp AI đồng hành cùng doanh nghiệp từ PoC đến triển khai thực tế.",
+    "AI Solutions Consultant & AI Engineer helping enterprises take Microsoft 365 Copilot and Amazon Q from PoC to real-world use. Chuyên gia tư vấn giải pháp và kỹ sư AI đồng hành cùng doanh nghiệp từ PoC đến triển khai thực tế.",
   applicationName: "Paul Nguyen Portfolio",
   openGraph: {
     type: "website",
     locale: "en_US",
     alternateLocale: ["vi_VN"],
     siteName: "Paul Nguyen",
-    title: "Paul Nguyen | AI Solution Architect · Kiến trúc sư Giải pháp AI",
+    title: "Paul Nguyen | AI Solutions Consultant & AI Engineer",
     description:
-      "Enterprise AI architecture from PoC to adoption. Kiến trúc AI doanh nghiệp từ PoC đến triển khai.",
+      "Enterprise AI consulting and engineering from PoC to adoption. Tư vấn và kỹ thuật AI doanh nghiệp từ PoC đến triển khai.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paul Nguyen | AI Solution Architect · Kiến trúc sư Giải pháp AI",
+    title: "Paul Nguyen | AI Solutions Consultant & AI Engineer",
     description:
-      "Enterprise AI architecture from PoC to adoption. Kiến trúc AI doanh nghiệp từ PoC đến triển khai.",
+      "Enterprise AI consulting and engineering from PoC to adoption. Tư vấn và kỹ thuật AI doanh nghiệp từ PoC đến triển khai.",
   },
 };
 

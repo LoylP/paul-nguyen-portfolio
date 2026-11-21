@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   allowedDevOrigins: ["shark-kind-barnacle.ngrok-free.app"],
   experimental: {
+    agentUpgrade: "security",
     agentFeedback: true,
     serverActions: {
       allowedOrigins: ["shark-kind-barnacle.ngrok-free.app", "localhost:3000"],

@@ -1,6 +1,6 @@
-# Paul Nguyen — AI Solution Architect
+# Paul Nguyen — AI Solutions Consultant & AI Engineer
 
-Personal portfolio of **Paul Nguyen (Nguyen Hoang Phuc)**, an AI Solution Architect focused on helping organizations move enterprise AI from proof of concept to practical adoption.
+Personal portfolio of **Paul Nguyen (Nguyen Hoang Phuc)**, an AI Solutions Consultant & AI Engineer focused on helping organizations move enterprise AI from proof of concept to practical adoption.
 
 The site presents selected solution consulting, engineering, and academic work, alongside professional experience, technical expertise, and industry experience. Project descriptions are intentionally anonymized where appropriate.
 

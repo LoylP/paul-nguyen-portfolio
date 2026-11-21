@@ -10,11 +10,11 @@ export const vi = {
   hero: {
     displayName: "Nguyễn Hoàng Phúc",
     altName: "Paul Nguyen",
-    headline: "AI Solution Architect & Technical Consultant",
+    headline: "AI Solutions Consultant & AI Engineer",
     tagline: "Đưa AI doanh nghiệp từ PoC đến triển khai thực tế",
-    meta: "TP.HCM · Đang mở cơ hội AI Solution Architect / Presales",
+    meta: "TP.HCM · Đang mở cơ hội AI Solution Consultant / Architect & AI Engineer",
     summary:
-      "AI Solution Architect giúp doanh nghiệp đưa Microsoft 365 Copilot và Amazon Quick từ PoC vào vận hành thực tế. Đã tư vấn cho 20+ doanh nghiệp và tham gia bảo vệ giải pháp cho 9 deal AI & Cloud, với nền tảng nghiên cứu AI vững chắc.",
+      "Chuyên gia Tư vấn Giải pháp & Kỹ sư AI giúp doanh nghiệp đưa Microsoft 365 Copilot và Amazon Q từ PoC vào vận hành thực tế. Đã tư vấn cho 20+ doanh nghiệp và tham gia bảo vệ giải pháp cho 9 deal AI & Cloud, với nền tảng nghiên cứu AI vững chắc.",
     ctas: [
       { label: "Tải CV" },
       { label: "Liên hệ", href: "#contact" },
@@ -46,15 +46,16 @@ export const vi = {
   experience: {
     title: "Kinh nghiệm",
     careerVision:
-      "Định hướng: phát triển thành Lead Solution Architect, dẫn dắt giải pháp AI doanh nghiệp từ khảo sát đến ứng dụng.",
+      "Lộ trình nghề nghiệp: AI Engineer Intern -> AI Solution Consultant & Presales -> Technical Lead – AI Implementation & Solutions.",
     items: [
       {
-        title: "AI Solution Architect",
+        title: "Technical Lead – AI Implementation & Solutions",
         organization: "Khoi Solutions (Remote / Hybrid)",
         period: "08/2026 – 11/2026",
         bullets: [
-          "Định hình kiến trúc giải pháp theo ưu tiên kinh doanh và mức độ sẵn sàng dữ liệu.",
-          "Đồng hành cùng doanh nghiệp trong lập kế hoạch và triển khai ứng dụng.",
+          "Dẫn dắt một đội ngũ kỹ thuật quy mô nhỏ trong việc thiết kế kiến trúc và triển khai các tính năng AI SaaS cũng như quy trình AI Adoption cho doanh nghiệp (Microsoft 365 Copilot, Amazon Q, Gemini).",
+          "Xây dựng kiến trúc giải pháp tổng thể, PoC demo và lộ trình triển khai kỹ thuật chuyên biệt cho khách hàng B2B khối Ngân hàng, Sản xuất và Bán lẻ.",
+          "Quản lý vận hành hạ tầng hệ thống nội bộ, đảm bảo tuân thủ bảo mật và chuẩn hóa tài liệu kỹ thuật phục vụ bàn giao dự án.",
         ],
       },
       {
